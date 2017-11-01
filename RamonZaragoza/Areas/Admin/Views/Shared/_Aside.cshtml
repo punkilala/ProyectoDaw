@@ -1,0 +1,33 @@
+﻿@{ 
+    int rol = Convert.ToInt16(Session["rol"]);
+}
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+        <ul id="menuTop" class="nav navbar-nav">
+            <li id="0"><a href="~/admin/usuario">Acerca de mi<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-info-sign"></span></a></li>
+            @if (rol == 1)
+            {
+                <li id="1"><a href="~/admin/experiencia?tipo=1">Experiencia Profesional<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-briefcase"></span></a></li>
+                <li id="2"><a href="~/admin/experiencia?tipo=2">Estudios<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-university"></span></a></li>
+                <li id="3"><a href="~/admin/Conocimiento">Conocimientos<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-line-chart"></span></a></li>
+                <li id="4"><a href="~/admin/Idioma">Idiomas<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-language"></span></a></li>
+                <li id="5"><a href="~/admin/Adjuntos">Documentos Adjuntos<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-folder-open"></span></a></li>
+                <li id="6"><a href="~/admin/Candidaturas">Candidaturas<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-id-card"></span></a></li>
+            }
+            else if (rol == 2)
+            {
+                <li id="1"><a href="~/admin/OfertaEmpleo">Ofertas de trabajo<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-briefcase"></span></a></li>
+            }
+
+            <li id="7"><a href="~/admin/Mensaje">Mensajes<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-envelope-open"></span></a></li>
+        </ul>
+    </div>
+</div>

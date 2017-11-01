@@ -1,0 +1,101 @@
+﻿@{
+    Layout = null;
+    //comprueebo que controldor actual
+    string controlador = ViewContext.RouteData.Values["Controller"].ToString().ToLower();
+    if (Session["nombre"] != null)
+    {
+        ViewBag.Usuario = Session["nombre"].ToString();
+        var foto = Session["foto"].ToString();
+        if (foto == "noFoto.jpg")
+        {
+            ViewBag.Foto = Url.Content("~/Content/images/noFoto.jpg");
+        }
+        else
+        {
+            ViewBag.Foto = Url.Content(Helper.SubirArchivos.GetRutaFotoPerfil() + Session["foto"]);
+        }
+        ViewBag.Alerta = Convert.ToInt32(Session["MensajesSinLeer"]);
+
+        //obtener id usuario
+        FormsAuthenticationTicket ticket = ((FormsIdentity)HttpContext.Current.User.Identity).Ticket;
+        ViewBag.idUsuario = ticket.UserData;
+
+    }
+}
+<div class="container-fluid">
+    <div class="navbar-header">
+        <i class="fa fa-tachometer"> </i> Panel de Control V.1
+    </div>  
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown messages-menu">
+            <!-- Alertas -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o" style="font-size: 1.2em;"></i>
+              @if (ViewBag.Alerta > 0)
+              {
+                <span id="alerta" class="label label-danger">@ViewBag.Alerta</span>
+              }
+              else
+              {
+                <span id="alerta" class="label label-danger"></span>
+              }
+            </a>
+            <ul class="dropdown-menu">
+                @if (ViewBag.Alerta > 0)
+                {
+                    <li style="padding: 10px;"  id="alertaTexto" class="header">Tiene @ViewBag.Alerta mensaje(s) sin leer</li>
+                }
+                else
+                {
+                    <li id="alertaTexto" class="header"></li>
+                }
+
+            </ul>
+        </li>
+        <li>@Html.ActionLink(" Ver Ofertas ", "index", new {Area="", controller="Ofertas" }, new { @class = "color fa fa-eye" })</li>
+        <!--MINI MENU-->   
+        <li class="dropdown">
+            <a id="yo" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-user"> </i> Mi Cuenta
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <div class="navbar-content">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img id="user-pic" src="@ViewBag.Foto"
+                                     alt="Alternate Text" class="img-responsive" />
+                                <p class="small">
+                                    <a style="color:black;" href="~/Admin/Usuario/FotoPerfil">Cambiar Foto</a>
+                                </p>
+                            </div>
+                            <div class="col-md-7">
+                                <span>Hola...</span>
+                                <p id="mi-nombre" class="text-muted small">
+                                    @ViewBag.Usuario
+                                </p>
+                                <div class="divider">
+                                </div>
+                                @Html.ActionLink("Ver Perfil","Index", new { area="", controller = "Perfil", id= ViewBag.idUsuario }, new { @class= "btn btn-primary btn-sm active", target="_blank" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-footer">
+                        <div class="navbar-footer-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="~/Admin/Usuario/CambioDePass" class="btn btn-success btn-sm">Cambiar Passowrd</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="~/Admin/Usuario/Logout" class="btn btn-danger btn-sm pull-right">Cerrar Sesion</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <!--fin MENU-->
+    </ul>
+</div>

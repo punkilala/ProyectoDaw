@@ -1,0 +1,103 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model PagedList<Models.Mensaje>
+@{ 
+    ViewBag.Cuantos = Model.Count(); 
+}
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+
+<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+    <!--INICIO FORMULARIO-->
+    @using (Html.BeginForm("_Listado", "Mensaje", FormMethod.Post, new { id = "adminForm" }))
+    {
+        //IMPORTANTE PARA PODER PASAR DE PAGINA CON AJAX Y JQUERY
+        @Html.Hidden("pagina", "")
+        <h4> 
+            @ViewBag.Estado (@ViewBag.Cuantos)
+            <span class="pull-right">
+                @Html.DropDownList("estado_id", new List<SelectListItem>
+               {
+                    new SelectListItem {Selected=true, Text="Sin Leer", Value="1" },
+                    new SelectListItem { Text="Leidos", Value="2"}
+               }, new { @class = "form-control input-sm" })      
+            </span> 
+        </h4>
+        if (ViewBag.Cuantos == 0)
+        {
+                <img class= "img-responsive" src = "../../../Content/images/noMensajes.jpg" />
+        }
+        else
+        {
+
+            <table class="table table-responsive table-condensed  table-hover table-striped table-sm">
+
+                <thead>
+                    <tr>
+                        <th width="50%">Asunto</th>
+                        <th width="20%">Remitente</th>
+                        <th class="text-center">Fecha</th>
+                        <td width="1%"><input type="checkbox" id="todo" name="todo" /></td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.ActionLink(item.Asunto, "LeerMensaje", new { id = item.id})
+                            </td>
+                            <td>@item.Remitente</td>
+                            <td class="text-center">@item.Fecha</td>
+                            <td class="text-center"><input name="idEliminar" class="seleccion" type="checkbox" value="@item.id" /></td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right">
+                              <button type="button" id="btnEliminar" data-funcion="ActualizaAlerta();" class="btn btn-danger btn-xs fa fa-trash-o" style="padding: 5px;"></button>
+                              <!--Solo elimnar si se pulsa el boton eliminar... este hidden se modifica desde paginacion.js-->
+                              @Html.Hidden("Eliminar")
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="row">
+                <div class="col-xs-12 footer-class">   
+                    <div class="col-xs-12 col-sm-7 col-sm-offset-4">
+                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index",
+                            new
+                            {
+                                pagina = page
+                            }))
+                    </div>
+                </div>
+            </div>
+        }
+}
+
+</div>
+
+<script>
+
+    $("#todo").change(function () {
+          $("input:checkbox").prop('checked', $(this).prop("checked"));
+    });
+
+
+    function ActualizaAlerta() {
+        //actualizo la alerta en menu top de los mensajes sin leer si se borra alguno antes de leer
+        var sesion = '@Session["MensajesSinLeer"]';
+        if (sesion > 0) {
+            $('#alerta').text(sesion);
+            $('#alertaTexto').text('Tiene ' +sesion +' mensaje(s) sin leer')
+        }else {
+            $('#alerta').text("");
+            $('#alertaTexto').text('No hay mensajes sin leer');
+        }
+    }
+
+
+</script>
+

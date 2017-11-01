@@ -1,0 +1,76 @@
+﻿@model Models.Usuario
+
+<script src="~/Scripts/misAjax.js"></script>
+
+<!-- Formulario Modal -->
+@using (Ajax.BeginForm("",null, new AjaxOptions
+{
+    HttpMethod = "POST",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "mensaje",
+    LoadingElementId = "cargando",
+    OnBegin = "onBegin",
+    OnSuccess = "onSuccess"
+},new { id = "adminRegistro", action= "/Home/_Registro" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="registro" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="registro">Registrarse</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Soy...</label>
+                        @Html.DropDownList("Rol_id", new List<SelectListItem>
+                           {
+                                new SelectListItem {Selected =true, Text="Candidato en busca de empleo", Value="1" },
+                                new SelectListItem {Text="Empresa que busca candidatos", Value="2" }
+                           }
+                            , new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label id="tipoUsuario">Nombre Candidato</label>
+                        @Html.TextBoxFor(u => u.Nombre, new { @class = "form-control", placeholder = "Ingrese el nombre" })
+                        @Html.ValidationMessageFor(u => u.Nombre, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        @Html.TextBoxFor(u => u.Email, new { @class = "form-control", placeholder = "Ingrese Correo Electrónico" })
+                        @Html.ValidationMessageFor(u => u.Email, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        @Html.PasswordFor(u => u.PassNuevo, new { @class = "form-control", placeholder = "Ingrese su contraseña" })
+                        @Html.ValidationMessageFor(u => u.PassNuevo, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Repetir Contraseña</label>
+                        @Html.PasswordFor(u => u.PassRepetir, new { @class = "form-control", placeholder = "Repita la contraseña" })
+                        @Html.ValidationMessageFor(u => u.PassRepetir, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <img id="cargando" style="display:none;" src="~/Content/images/ajax-loader.gif" />
+                    <button id="btn-enviar" type="submit" class="btn btn-primary">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<script>
+    $('#myModal').on('hidden.bs.modal', function () {
+        adminRegistro.reset();
+    });
+    $('#Rol_id').change(function () {
+        if ($(this).val() == 2) $('#tipoUsuario').text("Nombre Empresa");
+        else $('#tipoUsuario').text("Nombre Candidato");
+    });
+</script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>

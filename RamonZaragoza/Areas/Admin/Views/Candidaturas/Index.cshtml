@@ -1,0 +1,18 @@
+﻿<script src="~/Scripts/paginacion.js"></script>
+@{
+    ViewBag.Title = "Mis Candidaturas";
+}
+
+<h3><i class="fa fa-id-card"> </i> @ViewBag.Title</h3>
+
+<div id="parcial" class="col-xs-12">
+    @Html.Action("_Listado")
+</div>
+
+<script>
+    $(document).ready(function () {
+        Colorea('@Session["menuActivo"]');
+    });
+</script>
+
+

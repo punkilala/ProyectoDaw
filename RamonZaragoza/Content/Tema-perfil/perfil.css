@@ -1,0 +1,283 @@
+@import url('../bootstrap.min.css');
+@import url('../font-awesome.min.css');
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Russo+One);
+
+
+/* Body */
+body{
+    background:#eee url('images/bg.jpg');
+    font-family:Open Sans Condensed;
+    font-size:16px;
+    overflow-x:hidden;
+}
+
+/* Contenedor*/
+#perfil-container{
+    display:table;
+     width:100%;
+}
+
+/* Datos Personales */
+#usuario{
+    display:table-cell;
+    background-color:#DFDFDF;
+    width:380px;
+    height: 46em;
+}
+#usuario .usuario-container-fixed{
+    position:fixed;
+    width:inherit;
+}
+#usuario .usuario-container{
+    width: 50%;
+    margin: 0 auto;
+}
+#usuario .usuario-container h1{
+    font-family:Russo One;
+    font-size:1.4em;
+}
+#usuario .usuario-container .foto{
+    width:180px;
+    border:1px solid #ccc;
+    padding:10px;
+    background:#fff;
+}
+#usuario p{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+#usuario .usuario-container .texto{
+    display:block;
+    font-size:1.2em;
+    font-family:Russo One;
+}
+#usuario .usuario-container .campo{
+    display:block;
+    margin-bottom:15px;
+    text-shadow:1px 1px 1px #ddd;
+    font-size:1.2em;
+}
+
+/* Contenido*/
+#contenido{
+    display:table-cell;
+    background:#fff;
+    box-shadow:-20px 0 50px #afafaf;
+    border-left:1px solid #ccc;
+    vertical-align:top;
+}
+/* Menu*/
+#contenido .menu-container-fixed{
+    position:fixed;
+    width:100%;
+    z-index:1;
+}
+#contenido .menu{
+    background:#eee;
+    padding:20px;
+    border-bottom:1px solid #ddd;
+}
+/* cuerpo */
+#contenido .cuerpo-container{
+    padding:20px;
+    padding-top:100px;
+}
+/* Titulos*/
+#contenido .cuerpo-container .titulos{
+    text-shadow:1px 1px #8b8b8b;
+    color:#eee;
+    font-weight:bold;
+    padding:10px 20px;
+    margin:0;
+    margin-bottom:30px;
+    margin-left:-40px;
+    font-family:Arial;
+    font-size:1.6em;
+}
+#contenido .cuerpo-container .titulos .fa{
+    color:#fff;
+    margin-top:-2px;
+}
+#contenido .cuerpo-container .titulo-azul{
+    background:#51b6db;
+    border-left:20px solid #33738b;
+}
+#contenido .cuerpo-container .titulo-amarillo{
+    background:#dbbb51;
+    border-left:20px solid #847132;
+}
+#contenido .cuerpo-container .titulo-verde{
+    background:#68b93d;
+    border-left:20px solid #447729;
+}
+#contenido .cuerpo-container .titulo-rojo{
+    background:#b93d68;
+    border-left:20px solid #67223a;
+
+}
+#contenido .cuerpo-container .titulo-Lila{
+    background:#906292;
+    border-left:20px solid #563b57;
+
+}
+
+/* Listas */
+.lista{margin-bottom:20px;}
+.lista .lista-cabecera{
+    font-size:1.6em;
+    font-weight:bold;
+    font-family:Russo One;
+    margin-bottom:10px;
+}
+.lista .lista-cabecera-fecha{
+    font-size:0.6em;
+    font-weight:normal;
+    color:#888;
+    text-transform:uppercase;
+}
+.lista .lista-cabecera-subtitulos{
+    display:block;
+    font-size:0.6em;
+    font-weight:normal;
+    color:#444;}
+.lista .lista-descripcion{
+    text-align:justify;
+}
+#adjuntos li{
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+/* Idiomas */
+.cabecera-idioma{
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: Russo One;
+}
+.idioma-titulo{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #888;
+    text-transform: uppercase
+}
+.idioma-nivel{
+     font-size: 1.2em;
+    font-weight: normal;
+    text-transform: uppercase
+}
+
+/* Font Awesome */
+.fa-facebook-official{color:#1534ba;}
+.fa-twitter{color:#1574ba;}
+.fa-linkedin{background-color:#0077B5; color:white}
+
+/* Fix */
+.btn{border-radius:0;}
+.fa{font-size:1.2em;}
+.list-group-item .progress{margin-bottom:0;}
+.media-heading{font-weight:bold;}
+
+#footer{
+    padding:20px;
+    text-align:center;
+    background:#222;
+    color:#eee;
+    margin: 30px 0 auto;
+}
+#footer a{font-weight:bold;}
+
+/* Varios */
+form{position:relative;}
+.block-loading {
+    z-index:9999;background: url(images/ajax-loader.gif) #ddd center center no-repeat;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:999;
+    opacity:0.4;
+}
+
+/*pdf*/
+.pdf{
+    background-color:#ccc;
+    width:100%;
+    height:300px;
+    padding:10px;
+    margin-bottom:20px;
+}
+.pdf .foto {
+    width: 180px;
+    padding: 10px;
+    background: #fff;
+}
+.pdf p{
+    font-size:20px;
+    margin-left:7%;
+}
+.pdf .dni, .pdf .texto{
+    font-weight:bold;
+}
+
+/* Responsive */
+@media (max-width: 992px){
+
+    #usuario{width:260px;}
+    #usuario .usuario-container-fixed{width:260px;}
+}
+
+@media (max-width: 768px){
+
+    #perfil-container{display:block;}
+    #usuario{
+        display:block;
+        position:static;
+        width:100%;
+        height: auto;
+    }
+    #usuario .usuario-container-fixed{
+        width:inherit;
+        position:relative;
+    }
+    #usuario .usuario-container{text-align:center;}
+    #usuario .usuario-container .pic{
+        width:60%;
+        margin:auto;
+        margin-bottom:20px;
+    }
+    #usuario .usuario-container{
+        width:inherit;
+        padding:20px;
+        float:none;
+    }
+    #usuario .usuario-container h1{
+        font-family:Russo One;
+        margin-bottom:30px;
+    }  
+    #contenido .menu-container-fixed{bottom:0;}
+    #contenido .menu{
+        background:#ddd;
+        border-bottom:1px solid #ccc;
+        padding:10px;
+    }
+    #contendio .cuerpo-container{
+        padding:20px;
+        padding-bottom:80px;
+    }
+    #contenido .cuerpo-container .titulos{margin:0 -20px 30px -40px;}
+    
+    #contenido{display:block;}
+    #contenido .menu{
+        text-align:center;
+        border-top:1px solid #ddd;
+    }
+    #contenido .menu .social{
+        margin-top:20px;
+        text-align:center;
+    }
+    #footer{margin-bottom: 55px;}
+}

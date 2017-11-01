@@ -1,0 +1,68 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model PagedList<Models.OfertaEmpleo>
+
+
+<h3 class="page-header"> @ViewBag.TotalOfertas oferta(s) de trabajo encontrada(s)</h3>
+<div class="content-oferta">
+
+    @foreach (var rel in Model)
+    {
+        <div class="thumbnail">
+            @if (rel.Usuario.Foto == "noFoto.jpg")
+            {
+                <a href="~/perfil/index/@rel.Usuario_id" target="_blank">
+                    <img class="flotar-d img-cuerpoOferta" src="../../Content/images/noDisponible.jpg" alt="rel.Usuario.Nombre" title="Ver Perfil de @rel.Usuario.Nombre">
+                </a>
+            }
+            else
+            {
+                <a href="~/perfil/index/@rel.Usuario_id" target="_blank">
+                    <img class="flotar-d img-cuerpoOferta" src="../../Uploads/@rel.Usuario_id/FotoPerfil/@rel.Usuario.Foto" title="Ver Perfil de @rel.Usuario.Nombre">
+                </a>        
+            }
+            <div class="caption">
+                <h4>@rel.Nombre</h4>
+                <p class="titulo">@rel.Usuario.Nombre.ToUpper()</p>
+                <p>...</p>
+                @{
+                    string descripcion = rel.Descripcion;
+                    <p>@Html.CortarTexto(descripcion, 100)</p>
+                }
+                <div class="footer-der">
+                    <span>
+                        <i class="fa fa-clock-o"> @string.Format("{0:dd MMM yyyy}", rel.Fecha)</i>&nbsp;
+                        <i class="fa fa-map-marker"> @rel.Localidad</i>&nbsp;
+                        <i class="fa fa-cogs"> @rel.Categoria.nombre</i>&nbsp;
+                    </span>
+                </div>
+                <div class="footer-izq">
+                    <span>
+                        @if (rel.Salario > 0)
+                        {
+                            <i class="fa fa-money"> @string.Format("{0:C0}", rel.Salario) @rel.ModoPago @rel.Pago </i>
+                        }
+                        &nbsp;<i class="fa fa-user-circle-o"> @rel.Vacantes Vacante(s)</i>
+                    </span>
+                    <a href="~/Ofertas/detalle/@rel.id" class="btn btn-primary btn-xs" title="Ver Oferta"><i class="fa fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+                    }
+
+    <div class="row">
+        <div class="col-xs-12 footer-class">                
+            <div class="col-xs-12 col-sm-7 col-sm-offset-4">
+                @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index",
+                        new
+                        {
+                            pagina = page
+                        }))
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

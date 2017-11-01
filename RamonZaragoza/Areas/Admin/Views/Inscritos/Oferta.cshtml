@@ -1,0 +1,30 @@
+﻿<script src="~/Scripts/paginacion.js"></script>
+@{
+    ViewBag.Title = " Oferta " + Session["NumOferta"];
+}
+
+<h3 class="page-header">
+    <i class="fa fa-address-card"> </i>
+    Num: @Session["NumOferta"] - @ViewBag.Nombre
+    @if (ViewBag.Estado == true)
+    {
+        <span style="color:blue" class="pull-right"><b>Abierta</b></span>
+    }
+    else
+    {
+        <span style="color:darkred" class="pull-right"><b>Cerrada</b></span>
+    }
+</h3>
+
+<div id="parcial" class="col-xs-12">
+    @Html.Action("_Listado", new { id= Session["NumOferta"] })
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        Colorea('@Session["menuActivo"]');
+
+    });
+</script>
+

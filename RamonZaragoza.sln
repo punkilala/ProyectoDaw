@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamonZaragoza", "RamonZaragoza\RamonZaragoza.csproj", "{0EE94FAC-27FF-4048-A417-95CB1593B518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{61126B02-1DD8-4A71-8FE1-722EBBDC5D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{1778C702-4D35-419D-AFED-D8285526BC9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EE94FAC-27FF-4048-A417-95CB1593B518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE94FAC-27FF-4048-A417-95CB1593B518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE94FAC-27FF-4048-A417-95CB1593B518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE94FAC-27FF-4048-A417-95CB1593B518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61126B02-1DD8-4A71-8FE1-722EBBDC5D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61126B02-1DD8-4A71-8FE1-722EBBDC5D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61126B02-1DD8-4A71-8FE1-722EBBDC5D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61126B02-1DD8-4A71-8FE1-722EBBDC5D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1778C702-4D35-419D-AFED-D8285526BC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1778C702-4D35-419D-AFED-D8285526BC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1778C702-4D35-419D-AFED-D8285526BC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1778C702-4D35-419D-AFED-D8285526BC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

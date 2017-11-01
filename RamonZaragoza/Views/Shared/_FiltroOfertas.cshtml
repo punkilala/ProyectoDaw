@@ -1,0 +1,122 @@
+﻿<nav>
+    <div>
+        <h4>Titulo <span>oferta</span> </h4>
+        @Html.TextBox("porTitulo", null, new { @class = "form-control mi-input" })
+        <span class="input-group-btn">
+            <button id="btn-porTitulo" class="btn btn-default btn-sm" type="button" title="Quitar filtro"><i class="fa fa-trash-o"></i></button>
+        </span>
+    </div>
+    <div class="radios">
+        <h4>Fecha <span>Publicación</span> </h4>
+        @Html.RadioButton("porFecha", "0", true) <span> Cualquier Fecha</span> <br />
+        @Html.RadioButton("porFecha", "1") Ultimas 24H <br />
+        @Html.RadioButton("porFecha", "7") Ultimos 7 días <br />
+        @Html.RadioButton("porFecha", "15") Ultimos 15 días <br />
+    </div>
+    <div>
+        <h4>Ciudades</h4>
+        @Html.RadioButton("porCiudad","",true) Todas<br />
+        @foreach (Models.Anonimas.CiudadesConOferta item in @ViewBag.Ciudades)
+        {
+            @Html.RadioButton("porCiudad", item.Ciudad) <span> @item.Ciudad (@item.Cuenta)</span><br />
+        }
+    </div>
+    <div>
+        <h4>Por <span>categoria</span></h4>
+        @Html.DropDownList("porCategoria" ,new SelectList(ViewBag.Categorias,"id","nombre"),"Todas las Categorias",new { @class = "form-control", style="width:auto;" })
+    </div>
+    <div id="filtro-Salario">
+        <input id="porSalario" class="single-slider" type="hidden" value="0" />
+        <h4>Salario <span> igual o mayor a...</span></h4>
+        <p id="slider-range-min" style="margin-top: 5px;"></p>
+        @Html.TextBox("Salario",0, new { @readonly = "readonly" }) € <br />
+    </div>
+    <div>
+        @Html.RadioButton("porNombre", "Anual", true) Anual
+        @Html.RadioButton("porNombre", "Mensual") Mensual <br />
+    </div>
+
+    <a id="pull" href="#"><i class="fa fa-filter"> </i> Mostrar Filtro</a>
+</nav>
+
+
+<script>
+    $(document).ready(function () {
+        //marcar paginacion como false
+        $("#porFecha, #btn-porTitulo, #porCiudad, #porNombre").click(function () {
+            $("#pagina").val(1);
+        });
+        $("#porTitulo, #porCategoria").change(function () {
+            $("#pagina").val(1);
+        });
+
+        // comprobar escala
+        var pago = $("input[name=porNombre]:checked");
+        if (pago.val() == "Anual") {
+            EscalaAnual();
+        } else {
+            EscanaMensual();
+        }
+    });
+    //filtro responsive
+    $(function() {
+        var pull = $('#pull');
+        menu = $('nav div');
+        menuHeight = menu.height();
+
+        $(pull).on('click', function() {
+            menu.slideToggle();
+        });
+    });
+
+    $(window).resize(function(){
+        var w = $(window).width();
+        if(w > 320 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+
+    // Cambio Escala Salario
+    $('body').on('change', 'input', function () {
+        if ($(this).attr('id') == "porNombre") {
+            var pago = $(this).val();
+            if (pago == "Mensual") {
+                EscanaMensual();
+            } else {
+                EscalaAnual();
+            }
+        }
+    });
+
+    function EscalaAnual() {
+        var valorInicioal = $('#Salario').val();
+        $("#slider-range-min").slider({
+            range: "min",
+            value: valorInicioal,
+            min: 0,
+            max: 60000,
+            step: 500,
+            slide: function (event, ui) {
+                $("#Salario").val(ui.value);
+            }
+        });
+    }
+    function EscanaMensual() {
+        var salario = $('#Salario').val();
+        if (salario > 6000) { $('#Salario').val(6000) };
+        var valorInicioal = $('#Salario').val();
+        $("#slider-range-min").slider({
+            range: "min",
+            value: valorInicioal,
+            min: 0,
+            max: 6000,
+            step: 50,
+            slide: function (event, ui) {
+                $("#Salario").val(ui.value);
+            }
+        });
+    }
+</script>
+
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui-1.11.3.js"></script>

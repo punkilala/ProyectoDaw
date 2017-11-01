@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ASP.NET MVC</title>
+    <link href="~/fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.11.3.min.js"></script>
+    <link href="~/Content/animations.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("LOGOTIPO", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Ofertas Empleo", "Index", "Ofertas")</li>
+                    <li>@Html.ActionLink("Sumario", "Sumario", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                </ul>
+                @if (Session["rol"] != null && Request.IsAuthenticated)
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink(" Hola " + Session["nombre"], "Index", "Admin/usuario",null, new {@class= "fa fa-user"})</li>
+                        <li>@Html.ActionLink(" Cerrar Sesión", "Logout", "Admin/usuario", null, new { @class = "fa fa-sign-out" })</li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Registrarse","",null, new {href="#", data_toggle="modal", data_target="#myModal" })</li>
+                        <li>@Html.ActionLink("Iniciar Sesión", "Index", "Admin/Login")</li>
+                    </ul>
+                }
+                
+            </div>
+        </div>
+    </div>
+    <div id="page-contentido">
+        <!--BREADCRUMB-->     
+        @{
+            var url = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+            url += "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"];
+            if (url != "Home/Index")
+            {
+                    <div id="contenedor4">
+                        <div class="sombra animatedParent">
+                            <h1 class="animated growIn delay-500">@ViewBag.Title</h1>
+                        </div>
+                        <div class="BreadCrumb">
+                           <b>Esta usted.. </b> <i class="fa fa-home"></i>@Html.MvcSiteMap().SiteMapPath()
+                        </div>
+                    </div>
+                  
+            }
+        }
+
+        <!--MENSAJES AJAX-->
+        <div id="mensaje"></div>
+        <!--CUERPO-->
+        @RenderBody()
+
+        <!--FORMULARIO MODAL REGISTRO-->
+        @Html.Partial("~/Views/Shared/_Registro.cshtml", new Models.Usuario())
+
+        
+    </div>
+    
+    <!--FOOTER-->
+    @Html.Partial("_Footer")
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/css3-animate-it.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

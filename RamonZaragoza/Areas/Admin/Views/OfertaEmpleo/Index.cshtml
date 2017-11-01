@@ -1,0 +1,23 @@
+﻿<script src="~/Scripts/paginacion.js"></script>
+
+@{
+    ViewBag.Title = "Ofertas de empleo";
+}
+
+<h3 class="page-header">
+    <i class="fa fa-briefcase"> </i>
+    <b>@ViewBag.Title</b>
+    @Html.ActionLink("Agregar","Acciones",null, new { @class="btn btn-primary pull-right"})
+</h3>
+
+<div id="parcial" class="col-xs-12">
+    @Html.Action("_Listado", "OfertaEmpleo")
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        Colorea('@Session["menuActivo"]');
+
+    });
+</script>

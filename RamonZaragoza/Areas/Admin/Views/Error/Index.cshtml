@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutError.cshtml";
+}
+
+<div class="container">
+    <div class="col-xs-12">
+        <h2><span>@ViewBag.Error</span><br>@ViewBag.titulo</h2>
+        <p>@ViewBag.Descripcion</p>
+
+    </div>
+</div>
+<a href="@ViewBag.Volver">Volver...</a>
+

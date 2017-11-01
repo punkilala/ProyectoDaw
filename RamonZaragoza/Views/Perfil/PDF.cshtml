@@ -1,0 +1,53 @@
+﻿@model Models.Usuario
+@{
+    ViewBag.Title = Model.Nombre + " - CV";
+    Layout = "~/Views/Shared/_LayoutPerfil.cshtml";
+    var fNacimiento = string.Format("{0:d}", Model.FNacimiento);
+}
+<!--DATOS PERSONALES-->
+<div id="row">
+    <div class="col-xs-12 pdf">
+            <h1>@Model.Nombre @Model.Apellido</h1>
+            <p class="dni">@Model.Dni</p>
+            <div class="col-xs-3">
+               @if (@Model.Foto == "noFoto.jpg")
+               {
+                 <img class="foto" src="~/Content/images/noFoto.jpg" />
+               }
+               else
+               {
+                 <img class="foto" src="~/uploads/@Model.id/FotoPerfil/@Model.Foto" />
+               }
+            </div>
+            <div class="col-xs-9">
+                <p>
+                    <span class="texto">Fecha Nacimiento:</span>@fNacimiento
+                </p>   
+                <p>
+                    <span class="texto">Dirección</span>
+                    @Model.Direccion<br>@Model.Cp @Model.Ciudad / @Model.Pais
+                </p>
+                <p>
+                    <span class="texto">Teléfono</span>
+                    <span class="campo">
+                        @Model.Telefono  @if (Model.Telefono != null)
+                        { <span> / </span> } @Model.Movil
+                    </span>
+
+                </p>
+                <p>
+                    <span class="texto">Email</span>
+                    <a href="mailto:'@Model.Email'">@Model.Email</a>
+                </p>
+            </div>
+    </div>
+</div>
+
+<!--CONTENIDO-->
+<div id="contenido">
+
+    <div class="cuerpo-container cuerpo-fluid" style="margin-top:20px;">
+        <!--DATOS PERFIL-->
+        @Html.Action("_MostrarCv", new { id = Model.id })
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Inicio Sesión</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="~/Areas/Admin/Content/login.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+        <script src="~/Scripts/jquery-1.11.3.min.js"></script>
+    </head>
+<body class="login-bg">
+    <div class="contenido">
+        <div class="login">
+            <div class="col-xs-12">
+                    <div class="box">
+                        @RenderBody()
+                    </div>
+            </div>
+        </div>
+        <div class="noCuenta">
+            <p>¿Todavía no tiene una cuenta? @Html.ActionLink("Registrarse","Index",new { area="", controller="Home"})</p>
+        </div>
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.form.js"></script>
+    <script src="~/Scripts/misAjax.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model  PagedList<Models.Inscritos>
+
+@{ 
+    Models.Usuario datos = new Models.Usuario();
+}
+@using (Html.BeginForm("_Listado", "Inscritos", FormMethod.Post, new { id = "adminForm" }))
+{
+    @Html.Hidden("pagina","")
+    <div class="col-xs-12 col-sm-9">
+        <h4>Núm. Candidatos: @ViewBag.Cuenta</h4>
+    </div>
+    <div class="col-xs-12 col-sm-3 pull-right">
+        @Html.DropDownList("estado_id", new SelectList(ViewBag.LEstado, "id", "Descripcion"), new { @class = "form-control" });
+    </div>
+    <table class="table table-condensed table-hover table-responsive">
+        <thead>
+            <tr>
+                <th width="15%">DNI</th>
+                <th width="50%">Nombre</th>
+                <th width="15%" class="text-center">Ciudad</th>
+                <th width="18%" class="text-center">Fecha Inscrip.</th>
+                <th width="2%;" class="text-center">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(item.Usuario.Dni, "DatosUsuario", new {id=item.Usuario.id, inscrip=item.NumInscripcion, estado= item.estado_id})</td>
+                    <td>@item.Usuario.Nombre &nbsp; @item.Usuario.Apellido</td>
+                    <td class="text-center">@item.Usuario.Ciudad</td>
+                    <td class="text-center">@string.Format("{0:d}", item.Fecha)</td>
+                    <td class="text-center">
+                        @switch (item.estado_id)
+                        {
+                            case 4:
+                                <span class="badge" style="background:#DC3545">No leido</span>
+                                break;
+                            case 5:
+                                <span class="badge" style="background:#17A2B8">Leido</span>
+                                break;
+                            case 6:
+                                <span class="badge" style="background:#343A40">Rechazado</span>
+                                break;
+                            case 7:
+                                <span class="badge" style="background:#28A745">Pre-Selec</span>
+                                break;
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!--FOOTER-->
+    <div class="row">
+        <div class="col-xs-12 footer-class">
+            <div class="col-xs-12 col-sm-1" style="margin-top:12px">
+                <label>Por Página...</label>
+            </div>
+            <div class="col-xs-12 col-sm-3" style="margin-top:20px">
+                @Html.DropDownList("displayNum", new List<SelectListItem> {
+                            new SelectListItem {Text="uno",Value="1" },
+                            new SelectListItem {Selected=true, Text="Diez", Value="10" },
+                            new SelectListItem {Text="Veinte", Value="20" },
+                            new SelectListItem {Text="Treinta", Value="30" }
+                        }, new { @class = "form-control input-sm" })
+            </div>
+            <div class="col-xs-12 col-sm-7">
+                @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index",
+                   new
+                   {
+                       pagina = page
+                   }))
+            </div>
+            <div class="col-xs-12 text-right">
+                @Html.ActionLink("Volver","Index", "OfertaEmpleo",null, new { @class="btn btn-default"})
+            </div>
+        </div>
+    </div>
+}

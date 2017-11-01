@@ -1,0 +1,355 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('../font-awesome.min.css');
+/*varios*/
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.page-contentido{width:100%;}
+.jumbotron{padding: 50px;}
+.jumbotron h1, .container h2, #ultimasOfertas h2{font-family: 'Patua One', cursive;}
+.jumbotron h1 > span, .container h2 span, #ultimasOfertas h2 span, nav h4 span, h2 span{color:gray;}
+.jumbotron h1, .jumbotron p{text-align:center !important;}
+.cero-padding{padding:0 !important;}
+form{position:relative;}
+.block-porAjax {
+	z-index:99999;
+	background: url(../content/images/big-ajax-front.gif) #ddd center center no-repeat;
+	position: absolute;
+	width:100%;
+    height:100%;
+	opacity:0.4;
+}
+
+/* Mensajes*/
+#mensaje{
+    position: fixed;
+    width: 50%;
+    top: 60px;
+    z-index: 9999;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+#mensaje .alert{
+    margin-bottom:0;
+}
+
+/* Modal*/
+.modal-body{background-color: #efefef;}
+.modal-content{
+    width: 70%;
+    margin: 0 auto;
+}
+/*NavBar*/
+.navbar-inverse{
+    background-color:#d1d1d1 !important;
+    border-color:transparent;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #505050;
+}
+
+/*Carrusel*/
+.carousel-caption h3{
+    font-size: 34px;
+    font-weight:bold;
+}
+.carousel-caption{
+    text-align:left;
+    top:20px;
+}
+.carousel-caption p {
+    line-height: 10px;
+    font-size: 20px;
+    font-style: italic;
+}
+/*Banner Home*/
+.banner{
+    padding:0;
+    background-color:#f6f6f6;
+}
+.banner .row{margin-right: 0;}
+.banner img{
+    width:100%;
+    min-height: 500px;
+}
+.banner .banner-left{padding-right:0;}
+.banner .banner-right{
+    position: absolute;
+    left: 50%;
+    padding: 65px;
+}
+.banner-right h2 {
+    font-family: 'Bitter', serif;
+    color: dimgray;
+    font-size: 24px;
+    margin-bottom:20px;
+}
+.banner-right .subTitle{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 70%;
+    margin-bottom: 20px;
+}
+.banner-right .content{
+    font-size: 18px;
+    font-weight: 300;
+    color: #777;
+    line-height: 1.7778;
+    margin-bottom: 20px;
+}
+.banner-right .iconos{
+    text-align:center;
+}
+.banner-right .iconos p{font-size:16px;}
+.banner-right .iconos i{color:#5c5c8f;}
+/*Ultimas Ofertas*/
+#ultimasOfertas img{
+    max-width: 50%;
+    height: 100px;
+}
+#ultimasOfertas .titulo, .content-oferta .caption .titulo{
+    color:#adadad;
+    font-weight:bold;
+    margin-top: -10px;
+}
+#ultimasOfertas .caption span{
+    position: relative;
+    float: left;
+     color:#7b7b7b;
+}
+
+/*Ofertas relacionadas*/
+.flotar-d{float:left;}
+
+/*Parallax*/
+#contenedor4 {
+  background: url("images/textura.jpg") fixed; 
+  background-size: cover;
+  padding: 50px 0 0;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+  height:150px;
+  }
+ 
+#contenedor4 h1{
+  position: relative;
+  top: 50px;
+  text-align: center;
+  color: #fff!important;
+}
+.sombra{
+    background-image: url(images/rejilla.png);
+    height: 200px;
+    margin-top: -69px;
+    z-index: 2;
+}
+/*BreadCrumb*/
+.BreadCrumb{
+    position: relative;
+    width: 30%;
+    bottom: 100px;
+    left: 5%;
+    padding: 10px;
+    background: #d2d2d2;
+    border-radius: 5px;
+}
+
+/*Detalle oferta*/
+.cab-detalle{
+    display:table;
+    width:100%;
+}
+.cab-titulo{
+    display:table-cell;
+    width:80%;
+}
+.cab-logo{
+    display:table-cell;
+}
+.cab-logo img, .img-cuerpoOferta{
+    max-width: 200px !important;
+    max-height: 130px !important;
+}
+.cab-datos .empresa{
+    color: #999;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.cab-datos .condiciones{
+    padding: 20px;
+    background-color: #e7e6e6;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-align:center;
+}
+.cab-datos .condiciones span {
+    margin-right:30px;   
+}
+.cab-descripcion{
+    margin-top: 40px;
+    border: 1px solid #d4d2d2;
+    border-radius: 10px;
+    padding: 20px;
+}
+.sp{top:30px;}
+.cab-descripcion label{font-size: 1.5em;}
+.cab-footer{padding:20px;}
+.cab-footer #inscrito{
+    float: right;
+    margin-top: -30px;
+}
+.cab-footer .ft-inscp{font-size:1.4em;}
+
+/*Filtro Responsive*/
+a#pull {
+    display: none;
+}
+#filtro{
+    background: #f6f3f3;
+}
+nav {padding: 10px 20px;}
+nav .mi-input{
+    width: 70%;
+    height: 30px;
+    float: left;
+    margin-right:4px;
+}
+nav h4{font-weight:bold;font-size: 14px;}
+nav input, nav select, #slider-range-min{margin-left:10px !important;}
+#Salario{
+    width: 50px;
+    border: 0;
+    background: transparent;
+    text-align: right;
+}
+#slider-range-min{width:150px;}
+.content-oferta{
+    width:85%;
+    margin:0 auto;
+}
+/*Cuerpo ofertas*/
+.cuerpo-oferta .page-header{margin:0 0 20px;}
+.content-oferta .thumbnail {overflow:hidden;}
+.content-oferta .footer-izq{
+    float:right;
+}
+.content-oferta .footer-der{
+    float:left;
+}
+.img-cuerpoOferta{
+    width: 200px !important;
+    height: 130px !important;
+}
+.footer-izq i, .footer-der i{color:gray;
+}
+.footer-izq a i{color:white;}
+
+/*Footer*/
+footer{
+    position: relative;
+    top: 40px;
+    bottom:20px;
+    padding: 40px;
+    overflow:hidden;
+    background-color:#535353;
+    color: white;
+}
+footer .btn{
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+}
+
+footer i{
+    position:relative;
+    bottom: 1px;
+    right: 5px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+footer i:hover{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+footer a{margin-left: 5px;}
+footer .fa-facebook-official{color:#1534ba;}
+footer .fa-twitter{color:#1574ba;}
+footer .fa-linkedin-square{color:#0077B5;}
+footer .fa-youtube{color:#FF0000}
+
+
+/*RESPONSIVE*/
+@media screen and (max-width:992px) 
+{
+    .banner .banner-right {
+        position: static;
+    }
+
+    .banner img {
+          min-height: 0;
+          max-height: 300px;
+    }
+}
+@media screen and (max-width:657px)
+
+{
+    .carousel-caption p{display:none;}
+    .carousel-caption h2 {
+        font-size:20px;
+    }
+    .carousel-caption{margin-top:-45px;}
+}
+@media screen and (max-width:991px){
+    .BreadCrumb {width:60%; }
+}
+@media screen and (max-width:767px){
+    .cab-detalle, .cab-titulo,.cab-logo{display: block}
+    .cab-titulo{width:100%; text-align:center;}
+    .cab-logo{width:50%;margin: 0 auto; text-align:center;}
+    .cab-datos .condiciones span {display:block;}
+    .content-oferta {width: 100%;}
+    /*filtro responsive*/
+    #filtro{height:auto !important;}
+    nav div {
+        display: none;
+        height: auto;
+    }
+
+    nav a#pull {
+        display: block;
+        margin-top:10px;
+    }
+    .banner .banner-right {
+        padding: 30px 40px;
+    }
+}
+@media screen and (max-width:495px){
+    .BreadCrumb {width:90%; }
+    #contenedor4 h1{
+        top: 40px;
+        font-size: 20px;
+    }
+    #inscrito{margin-top: 0 !important;}
+    .banner-right h2 {
+    font-size: 18px;
+    }
+    .banner-right .subTitle{
+        font-size: 22px;
+        line-height: 90%;
+    }
+}
+

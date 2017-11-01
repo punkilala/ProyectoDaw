@@ -1,0 +1,132 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@{
+    IPagedList<Models.Conocimiento> Conocimientos = ViewBag.Listado;
+}
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+
+@using (Html.BeginForm("_Listado", "Conocimiento", FormMethod.Post, new { id = "adminForm", onsubmit = "return false;" }))
+{
+    @Html.Hidden("nombreOrderBy", "")
+    @Html.Hidden("tituloOrderBy", "")
+    //IMPORTANTE PARA PODER PASAR DE PAGINA CON AJAX
+    @Html.Hidden("pagina", "")
+    <table class="table table-condensed table-hover">
+        <thead>
+            <!--FILTRO-->
+            <tr>
+                <th>
+                    <div class="col-xs-7 input-group">
+                        @Html.TextBox("porNombre", "", new { @class = "form-control input-sm", placeholder="Buscar por conocimiento" })
+                        <span class="input-group-btn">
+                            <button id="btn-porNombre" class="btn btn-default btn-sm" type="button" title="Quitar filtro"><i class="fa fa-trash-o"></i></button>
+                        </span>
+                    </div>
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <!--ID miTabla se utilizara en jquery para seleccionar la ordenacion correcta-->
+            <tr id="miTabla">
+                <th width="60%">
+                    <a href="#" class="filtro" id="nombreOrder">Conocimiento</a>
+                </th>
+                <th>
+                    <a href="#" class="filtro" id="tituloOrder">Nivel</a>
+                </th>
+                <th class="text-center" width="1%">%</th>
+                <th width="1%;">
+                    <button type="button" id="btnEliminar" class="btn btn-danger btn-xs fa fa-trash-o"></button>
+                    <!--Solo elimnar si se pulsa el boton eliminar... este hidden se modifica desde paginacion.js-->
+                    @Html.Hidden("Eliminar")
+                </th>
+            </tr>   
+        </thead>
+        <tbody>
+            @foreach (var Conocimiento in Conocimientos)
+            {
+                <tr>
+                    <td style="vertical-align: middle;">
+                        <a href="@Url.Action("Acciones", "Conocimiento", new { id = Conocimiento.id })">@Conocimiento.Nombre</a>
+                    </td>
+                    <td>
+                        @{
+                            var pardillo = 0; var intermedio = 0; var dios = 0;
+                            pardillo = Conocimiento.Nivel - 45;
+                            if (pardillo <= 0)
+                            {
+                                pardillo = Conocimiento.Nivel;
+                            }
+                            else
+                            {
+                                pardillo = 45;
+                                intermedio = Conocimiento.Nivel - 80;
+                                if (intermedio <= 0)
+                                {
+                                    intermedio = 35 + intermedio;
+                                }
+                                else
+                                {
+                                    intermedio = 35;
+                                    dios = Conocimiento.Nivel - 80;
+                                }
+                            }
+                        }
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:@pardillo%">
+
+                            </div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:@intermedio%">
+
+                            </div>
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:@dios%">
+
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        @if (Conocimiento.Nivel <= 45)
+                        {
+                            <span class="badge" style="background-color:#D9534F">@Conocimiento.Nivel%</span>
+                        }
+                        else if (Conocimiento.Nivel >= 46 && Conocimiento.Nivel <= 80)
+                        {
+                            <span class="badge" style="background-color:#F0AD4E">@Conocimiento.Nivel%</span>
+                        }
+                        else
+                        {
+                            <span class="badge" style="background-color:#5CB85C">@Conocimiento.Nivel%</span>
+                        }
+                    </td>
+                    <td class="text-center">
+                        <input type="checkbox" class="seleccion" name="idEliminar" value="@Conocimiento.id" />
+                    </td>
+                </tr>
+                            }
+
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-xs-12 footer-class">
+                <div class="col-xs-12 col-sm-1" style="margin-top:12px">
+                    <label>Por Página...</label>
+                </div>
+                <div class="col-xs-12 col-sm-2" style="margin-top:20px">
+                    @Html.DropDownList("displayNum", new List<SelectListItem> {
+                            new SelectListItem {Text="Uno",Value="1" },
+                            new SelectListItem {Selected=true, Text="Cinco", Value="5" },
+                            new SelectListItem {Text="Diez", Value="10" },
+                            new SelectListItem {Text="Veinte", Value="20" }
+                        }, new { @class = "form-control input-sm" })
+                </div>
+            <div class="col-xs-12 col-sm-9">
+                @Html.PagedListPager((IPagedList)ViewBag.Listado, page => Url.Action("Index",
+                   new
+                   {
+                       pagina = page
+                   }))
+            </div>
+        </div>
+    </div>
+ }

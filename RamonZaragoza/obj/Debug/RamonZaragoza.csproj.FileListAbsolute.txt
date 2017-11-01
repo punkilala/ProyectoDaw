@@ -1,0 +1,356 @@
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\csc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\vbc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\RamonZaragoza.dll.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Antlr3.Runtime.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Newtonsoft.Json.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Helpers.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Optimization.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.WebPages.Deployment.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.WebPages.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.WebPages.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\WebGrease.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Helpers.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Optimization.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.WebPages.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.WebPages.Deployment.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\System.Web.WebPages.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Antlr3.Runtime.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Newtonsoft.Json.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\es\System.Web.Helpers.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\es\System.Web.Mvc.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\es\System.Web.Optimization.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\es\System.Web.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\es\System.Web.WebPages.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\obj\Debug\RamonZaragoza.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\obj\Debug\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\obj\Debug\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\EntityFramework.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\EntityFramework.SqlServer.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Models.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\Models.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\EntityFramework.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\nuevoProyecto\RamonZaragoza\RamonZaragoza\bin\EntityFramework.SqlServer.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\csc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\vbc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\RamonZaragoza.dll.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Antlr3.Runtime.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\EntityFramework.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\EntityFramework.SqlServer.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Models.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Newtonsoft.Json.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Helpers.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Optimization.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.WebPages.Deployment.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.WebPages.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.WebPages.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\WebGrease.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Models.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\EntityFramework.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\EntityFramework.SqlServer.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Helpers.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Optimization.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.WebPages.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.WebPages.Deployment.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\System.Web.WebPages.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Antlr3.Runtime.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Newtonsoft.Json.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\es\System.Web.Helpers.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\es\System.Web.Mvc.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\es\System.Web.Optimization.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\es\System.Web.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\es\System.Web.WebPages.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\obj\Debug\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\obj\Debug\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\obj\Debug\RamonZaragoza.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Helper.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\proyecto\RamonZaragoza\bin\Helper.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\csc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\vbc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\RamonZaragoza.dll.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Antlr3.Runtime.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\EntityFramework.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\EntityFramework.SqlServer.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Helper.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Models.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Newtonsoft.Json.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Helpers.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Optimization.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.WebPages.Deployment.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.WebPages.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.WebPages.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\WebGrease.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Helper.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Models.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\EntityFramework.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\EntityFramework.SqlServer.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Helpers.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Optimization.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.WebPages.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.WebPages.Deployment.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\System.Web.WebPages.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Antlr3.Runtime.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Newtonsoft.Json.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\es\System.Web.Helpers.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\es\System.Web.Mvc.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\es\System.Web.Optimization.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\es\System.Web.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\es\System.Web.WebPages.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\obj\Debug\RamonZaragoza.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\obj\Debug\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\obj\Debug\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\PagedList.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\PagedList.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\PagedList.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\PagedList.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Rotativa.Core.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\Rotativa.MVC.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\csc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\vbc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\RamonZaragoza.dll.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Antlr3.Runtime.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\EntityFramework.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\EntityFramework.SqlServer.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Helper.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Models.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Newtonsoft.Json.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\PagedList.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\PagedList.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Rotativa.Core.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Rotativa.MVC.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Helpers.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Optimization.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.WebPages.Deployment.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.WebPages.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.WebPages.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\WebGrease.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Helper.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Models.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\EntityFramework.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\EntityFramework.SqlServer.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\PagedList.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\PagedList.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Helpers.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Optimization.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.WebPages.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.WebPages.Deployment.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\System.Web.WebPages.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Antlr3.Runtime.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\Newtonsoft.Json.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\es\System.Web.Helpers.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\es\System.Web.Mvc.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\es\System.Web.Optimization.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\es\System.Web.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\es\System.Web.WebPages.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\obj\Debug\RamonZaragoza.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\obj\Debug\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\MiProyectoBackup\RamonZaragoza\obj\Debug\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\csc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\vbc.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\RamonZaragoza.dll.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Antlr3.Runtime.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\EntityFramework.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\EntityFramework.SqlServer.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Helper.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Models.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Newtonsoft.Json.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\PagedList.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\PagedList.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Rotativa.Core.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Rotativa.MVC.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Helpers.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Mvc.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Optimization.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.WebPages.Deployment.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.WebPages.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.WebPages.Razor.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\WebGrease.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Helper.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Models.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\EntityFramework.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\EntityFramework.SqlServer.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\PagedList.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\PagedList.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Helpers.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Mvc.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Optimization.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.WebPages.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.WebPages.Deployment.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\System.Web.WebPages.Razor.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Antlr3.Runtime.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\Newtonsoft.Json.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\es\System.Web.Helpers.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\es\System.Web.Mvc.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\es\System.Web.Optimization.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\es\System.Web.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\es\System.Web.WebPages.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\obj\Debug\RamonZaragoza.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\obj\Debug\RamonZaragoza.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\cambio panel\RamonZaragoza\obj\Debug\RamonZaragoza.pdb
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\csc.exe
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\vbc.exe
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\RamonZaragoza.dll.config
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\RamonZaragoza.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\RamonZaragoza.pdb
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Antlr3.Runtime.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\EntityFramework.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\EntityFramework.SqlServer.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Helper.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Models.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Newtonsoft.Json.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\PagedList.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\PagedList.Mvc.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Rotativa.Core.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Rotativa.MVC.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Helpers.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Mvc.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Optimization.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Razor.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.WebPages.Deployment.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.WebPages.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.WebPages.Razor.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\WebGrease.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Helper.pdb
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Models.pdb
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\EntityFramework.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\EntityFramework.SqlServer.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\PagedList.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\PagedList.Mvc.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Helpers.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Mvc.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Optimization.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.Razor.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.WebPages.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.WebPages.Deployment.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\System.Web.WebPages.Razor.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Antlr3.Runtime.pdb
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\Newtonsoft.Json.xml
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\es\System.Web.Helpers.resources.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\es\System.Web.Mvc.resources.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\es\System.Web.Optimization.resources.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\es\System.Web.Razor.resources.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\es\System.Web.WebPages.resources.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\obj\Debug\RamonZaragoza.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\obj\Debug\RamonZaragoza.dll
+C:\Users\usuario\Downloads\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\miProyecto-a329ec1c94bee3c4bbd23e5cdbc977d4e3739828\RamonZaragoza\obj\Debug\RamonZaragoza.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\MvcSiteMapProvider.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\MvcSiteMapProvider.WebActivator.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\WebActivatorEx.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\MvcSiteMapProvider.xml
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\RamonZaragoza\bin\MvcSiteMapProvider.WebActivator.xml

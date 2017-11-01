@@ -1,0 +1,48 @@
+﻿@model Models.Adjuntos
+@{
+    ViewBag.Title = "Documentos Adjuntos";
+}
+@Html.Hidden("MenuActivo")
+<div id="testimonios" class="page">
+
+    <h3 class="page-header remove-margin">
+        <i class="fa fa-folder-open"> </i>
+        @ViewBag.Title
+    </h3>
+    <div class="row">
+
+        <!--ADJUNTOS-->
+        <div class="col-xs-12 col-sm-6" id="Adjuntos">
+            @Html.Action("_Listado")
+        </div>
+        <!--SUBIR ADJUNTOS-->
+        <div class="col-xs-12 col-sm-6">
+            @using (Html.BeginForm("NuevoAdjunto", "Adjuntos", FormMethod.Post, new { id = "formAdjuntos", enctype = "multipart/form-data" }))
+            {
+
+                @Html.HiddenFor(a=>a.Usuario_id)
+                <div class="form-group">
+                    @Html.Label("Seleccione un documento a subir");
+                    @Html.TextBox("fichero", new object { }, new { @type = "file", @class = "form-control", @style = "height: auto;", @multiple = "true" })
+                    @Html.ValidationMessageFor(a => a.fichero, "", new { @class = "label label-danger" })
+                </div>
+                <div class="panel-footer">
+                    <button data-ajax="true" type="submit" class="btn btn-primary">Seleccionar</button>
+                </div>
+            }
+        </div>
+
+    </div><!--Fin fila-->
+
+</div>
+<script>
+    $(document).ready(function () {
+        Colorea('@Session["menuActivo"]');
+    });
+    function RecargarAdjuntos() {
+        var url = "@Url.Action("_Listado", "Adjuntos")";
+        $("#Adjuntos").load(url);
+        $('#fichero').val('');
+    }
+</script>
+

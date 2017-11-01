@@ -1,0 +1,60 @@
+﻿@model List<Models.OfertaEmpleo>
+@{
+    ViewBag.Title = "Inicio";
+}
+
+@Html.Partial("_Carrusel")
+
+<div class="page-contentido">
+    <div class="jumbotron">
+        <h1>ASP.NET <span>MVC</span></h1>
+        <p class="lead">Visita la lista de Ofertas de empleo disponibles</p>
+        <p>@Html.ActionLink("Ver Ofertas >>","Index","Ofertas",null, new {@class= "btn btn-primary btn-lg" })</p>
+    </div>
+</div>
+
+<!--ULTIMAS OFERTAS-->
+<div class="container">
+    <h2 class="page-header">Ultimas <span>Ofertas</span></h2>
+    <div class="row">
+        @foreach (var oferta in Model)
+        {
+            <div id="ultimasOfertas" class="col-xs-12 col-md-3">
+                <div class="thumbnail">
+                    @if (oferta.Usuario.Foto == "noFoto.jpg")
+                    {
+                        <a href="~/Perfil/index/@oferta.Usuario_id" target="_blank">
+                            <img src="../../Content/images/noDisponible.jpg" 
+                                 alt="@oferta.Usuario.Nombre" title="Ver perfil de @oferta.Usuario.Nombre">
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="~/Perfil/index/@oferta.Usuario_id" target="_blank">
+                            <img src="../../Uploads/@oferta.Usuario_id/FotoPerfil/@oferta.Usuario.Foto" 
+                                 title="Ver perfil de @oferta.Usuario.Nombre">
+                        </a>
+                    }
+                    <div class="caption">
+                        <h4>@oferta.Nombre</h4>
+                        <p class="titulo">@oferta.Usuario.Nombre.ToUpper()</p>
+                        <p>...</p>
+                        <p>@Html.CortarTexto(oferta.Descripcion,100)</p>
+                        <p class="text-right">
+                            <span>
+                                 <i class="fa fa-map-marker"> @oferta.Localidad</i>&nbsp;
+                                 <i class="fa fa-user-circle-o"> @oferta.Vacantes Vacante(s)</i>
+                            </span>
+                            <a href="~/Ofertas/detalle/@oferta.id" class="btn btn-primary btn-xs" title="Ver Oferta"><i class="fa fa-eye"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<!--FIN ULTIMAS OFERTAS-->
+<!--BANNER-->
+@Html.Partial("_Banner")
+<!--BANNER-->
+

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Conocimientos obtenidos";
+}
+@Html.Hidden("MenuActivo")
+<script src="~/Scripts/paginacion.js"></script>
+<div id="habilidades" class="page">
+
+    <h3 class="page-header remove-margin">
+        @Html.ActionLink("Agrega", "Acciones", null, new { @class = "btn btn-primary pull-right" })
+        <i class="fa fa-line-chart"> </i>
+        @ViewBag.Title
+    </h3>
+    <div id="parcial" class="col-xs-12">
+        @Html.Action("_Listado", "Conocimiento")
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        Colorea('@Session["menuActivo"]');
+    });
+</script>

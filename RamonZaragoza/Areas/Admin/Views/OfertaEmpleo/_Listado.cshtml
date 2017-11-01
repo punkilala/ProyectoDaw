@@ -1,0 +1,176 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model PagedList<Models.OfertaEmpleo>
+
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui-1.11.3.js"></script>
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script src="~/Scripts/jquery.maskedinput.js"></script>
+
+
+<!--FORMULARIO-->
+@using (Html.BeginForm("_Listado", "OfertaEmpleo", FormMethod.Post, new { id = "adminForm" }))
+{
+    // ORDENACION
+    @Html.Hidden("numeroOrderBy", "")
+    @Html.Hidden("nombreOrderBy", "")
+    @Html.Hidden("desdeOrderBy", "")
+    @Html.Hidden("inscritosOrderBy", "")
+    @Html.Hidden("pagina", "")
+    @Html.Hidden("CambiarEstado", 0)
+
+    <!--FILTRO-->
+    <div class="col-xs-12 col-sm-4 mi-filtro">
+        <div class="col-xs-12 input-group">
+            @Html.DropDownList("Estado", new List<SelectListItem>{
+            new SelectListItem {Selected=true, Text="Abiertas", Value="true" },
+            new SelectListItem { Text="Cerradas", Value="false"}
+        }, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-12 input-group">
+            @Html.TextBox("porTitulo", null, new { @class = "form-control input-sm", placeholder = "Numero de oferta" })
+            <span class="input-group-btn">
+                <button id="btn-porTitulo" class="btn btn-default btn-sm" type="button" title="Quitar filtro"><i class="fa fa-trash-o"></i></button>
+            </span>
+        </div>
+        <div class="col-xs-12 input-group">
+            @Html.TextBox("porNombre", null, new { @class = "form-control input-sm", placeholder = "Nombre de la oferta" })
+            <span class="input-group-btn">
+                <button id="btn-porNombre" class="btn btn-default btn-sm" type="button" title="Quitar filtro"><i class="fa fa-trash-o"></i></button>
+            </span>
+        </div>
+        <div class="col-xs-12 input-group">
+            @Html.TextBox("porFecha", null, new { @class = "form-control input-sm", placeholder = "Fecha de la Oferta" })
+            <span class="input-group-btn">
+                <button id="btn-porFecha" class="btn btn-default btn-sm" type="button" title="Quitar filtro"><i class="fa fa-trash-o"></i></button>
+            </span>
+        </div>
+    </div>
+    <!--FIN FILTRO-->
+
+    <!--TABLA-->
+    <div class="col-xs-12 col-sm-8">
+        <table class="table table-condensed table-hover table-responsive">
+            <thead>
+                <!--ID miTabla se utilizara en jquery para seleccionar la ordenacion correcta-->
+                <tr id="miTabla">
+                    <th width="10%;" class="text-center"><a href="#" class="filtro" id="numeroOrder">Num. Oferta</a></th>
+                    <th width="55%;"><a href="#" class="filtro" id="nombreOrder">Nombre</a></th>
+                    <th class="text-center"><a href="#" class="filtro" id="desdeOrder">Fecha</a></th>  
+                    <th></th>
+                    <th><a href="#" class="filtro" id="inscritosOrder">Inscritos</a></th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var oe in Model)
+                {
+                    <tr>
+                        <td class="text-center"><a href="@Url.Action("Acciones","OfertaEmpleo", new { id = oe.id })"><b>@oe.id</b></a></td>
+                        <td>@Html.ActionLink(oe.Nombre,"Detalle",new {area="", controller="Ofertas",id= oe.id},new { target = "_blank" })</td>
+                        <td class="text-center">@string.Format("{0:d}", oe.Fecha)</td>     
+                        <td>
+                               @if (oe.Inscritos.Count() > 0)
+                               {
+                                   if (oe.Inscritos.Where(x => x.estado_id == 4).Count() > 0)
+                                   {
+                                      <a href="@Url.Action("Oferta","Inscritos",new { id=oe.id})" title="Tiene Inscritos sin leer">
+                                        <i class="fa fa-search fa-2x" style="color:indianred"></i>
+                                      </a>
+                                   }
+                                   else
+                                   {
+                                      <a href="@Url.Action("Oferta","Inscritos",new { id=oe.id})" title="Ver Inscritos">
+                                          <i class="fa fa-search fa-2x"></i>
+                                      </a>
+                                   }
+                               }
+                               else
+                               {
+                                 <i class="fa fa-search fa-2x" title="Ningun inscrito"></i>
+                               }
+                                
+                        </td>
+                        <td class="text-center">@oe.Inscritos.Count()</td>
+                        <td class="text-center">
+                            @if (oe.Abierta)
+                            {
+                                <a href="#" class="cambiarEstado">
+                                    <i class="fa fa-unlock-alt fa-2x" style="color:#5CB85C;" title="Cerrar Oferta"></i>
+                                </a>  
+                            }
+                            else
+                            {
+                                <a href="#" class="cambiarEstado">
+                                  <i class="fa fa-lock fa-2x" style="color:#D9534F;" title="Abrir Oferta"></i>
+                                </a>
+                            }   
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <!--FIN TABLA-->
+        <!--FOOTER--> 
+        <div class="row">
+            <div class="col-xs-12 footer-class">
+                <div class="col-xs-12 col-sm-2" style="margin-top:12px">
+                    <label>Por Página...</label>
+                </div>
+                <div class="col-xs-12 col-sm-3" style="margin-top:20px">
+                    @Html.DropDownList("displayNum", new List<SelectListItem> {
+                            new SelectListItem {Text="Uno",Value="1" },
+                            new SelectListItem {Selected=true, Text="Ocho", Value="8" },
+                            new SelectListItem {Text="Diez", Value="15" },
+                            new SelectListItem {Text="Veinte", Value="20" }
+                        }, new { @class = "form-control input-sm" })
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index",
+                   new
+                   {
+                       pagina = page
+                   }))
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--FIN FOOTER-->
+
+}
+<!--FIN FORMULARIO-->
+@section Scripts {
+    <script>
+
+        $("#porFecha").datepicker({ dateFormat: "dd/mm/yy" }).mask("99/99/9999");
+
+        //Deshabilitar dias futuros
+        $("#porFecha").datepicker("option", "maxDate", "+0m +0d");
+
+        //Mostrar rango de 50 años
+        $("#porFecha").datepicker("option", "yearRange", "-50:+0");
+
+        $.validator.addMethod('date',
+               function (value, element, params) {
+                   if (this.optional(element)) {
+                       return true;
+                   }
+                   var ok = true;
+                   try {
+                       $.datepicker.parseDate('dd/mm/yy', value);
+                   }
+                   catch (err) {
+                       ok = false;
+                   }
+                   return ok;
+               });
+
+
+    </script>
+}
+
+
+
+

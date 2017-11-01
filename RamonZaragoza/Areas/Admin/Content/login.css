@@ -1,0 +1,63 @@
+﻿
+.login-bg {
+  background: rgba(255, 255, 255, 0);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: -ms-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-color: #eff0f3;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.contenido{
+    width:500px;
+    margin:0 auto;
+    margin-top:40px;
+}
+.box{
+   width: 90% !important;
+   margin: 0 auto;
+}
+.login{
+    margin: 0 auto;
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+    border:1px solid #cecece;
+    border-radius:6px;
+    text-align: center;
+}
+.accion{width:80%;}
+.division{
+    height: 70px;
+}
+.division span{
+    font-size:20px;
+}
+.division  .dch{
+    top: 35px;
+    position: relative;
+    max-width: 40%;
+    right: 110px;
+    border-color: blueviolet;
+}
+.division  .izq{
+    top: -35px;
+    position: relative;
+    max-width: 40%;
+    left: 105px;
+    border-color: blueviolet;
+}
+.noCuenta{
+    margin-top: 30px;
+    text-align: center;
+}
+#mensaje{height:50px;}
+
+@media (max-width: 520px) {
+    .contenido {
+        width: 90%;
+    }
+}

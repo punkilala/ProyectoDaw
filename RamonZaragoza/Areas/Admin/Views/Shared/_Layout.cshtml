@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/admin-estilo.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.11.3.js"></script> 
+
+    <script language="javascript" type="text/javascript">
+        //evitar que se vuelva atras en el navegador despues de hacer logout
+          javascript:window.history.forward(1);
+    </script>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+        @Html.Partial("~/areas/admin/views/shared/_MenuTop.cshtml")      
+    </nav>
+    <nav class="navbar navbar-default sidebar" role="navigation">
+        @Html.Partial("~/areas/admin/views/shared/_Aside.cshtml")
+    </nav>
+        <div class="col-sm-9 miContent">
+            <section id="secPrincipal">
+                @RenderBody()
+            </section>
+        </div>
+    
+
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/jquery.form.js"></script>
+        <script src="~/Scripts/misAjax.js"></script>
+        <script src="~/Areas/Admin/script/ColoreaTop.js"></script>
+
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    
+
+        @RenderSection("scripts", required: false)
+</body>
+</html>

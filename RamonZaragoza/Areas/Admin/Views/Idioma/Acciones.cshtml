@@ -1,0 +1,57 @@
+﻿
+@model Models.Idioma
+
+@using (Ajax.BeginForm("Acciones", new AjaxOptions
+{
+    HttpMethod = "POST",
+    InsertionMode=InsertionMode.Replace,
+    UpdateTargetId="mensaje",
+    OnSuccess="onSuccess"
+}))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(i=>i.id)
+    @Html.HiddenFor(i=>i.Usuario_id)
+    <h3 class="page-header">@ViewBag.Title</h3>
+    <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+            <label>Idioma</label>
+            @if (Model.id == 0)
+            {
+                @Html.DropDownList("Idiomas_id", new SelectList(ViewBag.IdiomasDisponibles, "id", "descripcion"), new { @class = "form-control" })
+            }
+            else
+            {
+                <input type="text" class="form-control" value="@Model.Idiomas.Descripcion" readonly />
+                @Html.HiddenFor(i => i.Idiomas_id)
+            }
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+            <label>Hablado</label>
+            @Html.DropDownList("Hablado", new SelectList(ViewBag.Nivel, "descripcion", "descripcion"), new { @class = "form-control" })
+            @Html.ValidationMessageFor(i => i.Hablado, "", new { @class = "label label-danger" })
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+        <div class="form-group">
+            <label>Escrito</label>
+            @Html.DropDownList("Escrito", new SelectList(ViewBag.Nivel, "descripcion", "descripcion"), new { @class = "form-control" })
+            @Html.ValidationMessageFor(i => i.Hablado, "", new { @class = "label label-danger" })
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 text-center">
+        @Html.ActionLink("Volver", "Index", null, new { @class = "btn btn-default btn-sm", style ="margin-top: 25px;" })
+        <button type="submit" class="btn btn-primary btn-sm" style="margin-top: 25px;">Enviar</button>
+    </div>
+    <div id="mensaje" class="col-xs-12 col-sm-9"></div>
+}
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+        Colorea('@Session["menuActivo"]');
+    });
+</script>
+

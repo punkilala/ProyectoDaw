@@ -1,0 +1,71 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model PagedList<Models.Inscritos>
+
+@using (Html.BeginForm("_Listado", "Candidaturas", FormMethod.Post, new { id = "adminForm" }))
+{
+    @Html.Hidden("pagina", "")
+    <div class="candidaturas">
+        @foreach (var ca in Model)
+        {
+            <div class="content-can" @if (ca.OfertaEmpleo.Abierta == false) { <text> style="background-color:#f3f3f3"</text>} >
+                <header>
+                    <div class="titulo" @if (ca.OfertaEmpleo.Abierta == false) { <text> style="text-decoration:line-through"</text>}>
+                        @Html.ActionLink(ca.OfertaEmpleo.Nombre, "Historial", new { id = ca.Oferta_id })
+                    </div>
+                    <div class="hora">
+                        <i class="fa fa-clock-o"></i> @string.Format("{0:dd MMM yyyy}", ca.Fecha)
+                    </div>
+                </header>
+                <div class="contenido">
+                    <div class="titulo">
+                        @ca.OfertaEmpleo.Usuario.Nombre
+                    </div>
+                    <div class="datos">
+                        <span><i class="fa fa-cogs"></i> @ca.OfertaEmpleo.Categoria.nombre</span>
+                        <span>
+                            <i class="fa fa-user-circle-o">
+                            </i> @ca.OfertaEmpleo.Inscritos.Count() Inscritos
+                            ...para @ca.OfertaEmpleo.Vacantes Vacante(s)
+                            @switch (@ca.Estado.id)
+                            {
+                                case 4:
+                                    <span style="color:#DC3545; float:right;"><i class="fa fa-eye-slash"></i> @ca.Estado.Descripcion</span>
+                                    break;
+                                case 5:
+                                    <span style="color:#17A2B8; float:right;"><i class="fa fa-eye"></i> @ca.Estado.Descripcion</span>
+                                    break;
+                                case 6:
+                                    <span style="color:#343A40; float:right;"><i class="fa fa-thumbs-down"></i> @ca.Estado.Descripcion</span>
+                                    break;
+                                case 7:
+                                    <span style="color:#28A745; float:right;"><i class="fa fa-thumbs-up"></i> @ca.Estado.Descripcion</span>
+                                    break;
+                            }
+                        </span>
+                        @if (ca.OfertaEmpleo.Abierta == false)
+                    {
+                            <span style="color:#891E83;">
+                                ...La Empresa ha cerrado el proceso de selección
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        }
+                    </div>
+                </div>
+            </div>   
+        }
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 footer-class">
+            <div class="col-xs-12 col-sm-7 col-sm-offset-4">
+                @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index",
+                new
+                {
+                    pagina = page
+                }))
+            </div>
+        </div>
+    </div>
+}

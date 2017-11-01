@@ -1,0 +1,162 @@
+﻿@model Models.OfertaEmpleo
+@{
+    ViewBag.Title = Model.Nombre;
+}
+<div class="container-fluid">
+    <div class="col-xs-12 col-sm-8 sp">
+        <div class="cab-detalle">
+            <div class="cab-titulo">
+                <h2>@Model.Nombre</h2>
+            </div>
+            <div class="cab-logo">
+                @if (Model.Usuario.Foto == "noFoto.jpg")
+                {
+                    <a href="~/perfil/index/@Model.Usuario_id" target="_blank">
+                        <img src="~/Content/images/noFoto.jpg" alt="@Model.Usuario.Nombre" 
+                             title="Ver perfil de @Model.Usuario.Nombre" />
+                    </a>
+                }
+                else
+                {
+                    <a href="~/perfil/index/@Model.Usuario_id" target="_blank">
+                        <img src="~/Uploads/@Model.Usuario.id/FotoPerfil/@Model.Usuario.Foto"
+                             alt="@Model.Usuario.Nombre" title="Ver perfil de @Model.Usuario.Nombre" />
+                    </a>   
+                }
+            </div>
+        </div>
+        <div class="cab-datos">
+            <p class="empresa">@Model.Usuario.Nombre.ToUpper()</p>
+            <div class="condiciones">
+                <span><i class="fa fa-clock-o" aria-hidden="true"></i> @string.Format("{0:dd MMM yyy}", Model.Fecha)</span>
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i> @Model.Localidad</span>
+                <span><i class="fa fa-cogs" aria-hidden="true"></i> @Model.Categoria.nombre</span>
+                <span><i class="fa fa-user-circle-o" aria-hidden="true"></i> @Model.Vacantes Vacante(s)</span>
+                <span>
+                    <i class="fa fa-money" aria-hidden="true"></i> 
+                    @if (Model.Salario > 0)
+                    {
+                       <span> @string.Format("{0:C0}", Model.Salario) @Model.ModoPago @Model.Pago</span>
+                    }
+                    else
+                    {
+                        <span> No especificado</span>
+                    }
+
+                </span>
+            </div> 
+        </div>
+        <div class="cab-descripcion">
+
+            <label><b>Requisitos Minimos...</b></label>
+                @Html.Raw(Model.RequisitosMin)
+
+            <label><b>Experiencia Minima...</b></label>
+                @Html.Raw(Model.ExperienciaMin)
+
+            <label><b>Descripción...</b></label>
+                @Html.Raw(Model.Descripcion)       
+                        
+        </div>
+        <div class="cab-footer">
+            <div class="ft-inscp">
+                <i class="fa fa-pencil" aria-hidden="true"></i> <span id="numInscritos">@Model.Inscritos.Count()</span> Inscritos    
+                @{
+                    if (Session["rol"] != null && Request.IsAuthenticated)
+                    {
+                        int usuarioActivo = (Int32)ViewBag.UsuarioActivo;
+                        int rol;
+                        int.TryParse(Session["rol"].ToString(), out rol);
+                        if (rol == 1)
+                        {
+                            if (Model.Inscritos.Where(x => x.Usuario_id_D == usuarioActivo).Count() > 0)
+                            {
+                                <span style="color:#449D44; float:right;">Usted está inscrito</span>
+                            }
+                            else
+                            {
+                                using (Ajax.BeginForm("Detalle", new AjaxOptions
+                                {
+                                    HttpMethod = "POST",
+                                    Confirm = "¿Esta seguro que se quiere inscribir en: " + Model.Nombre + "?",
+                                    LoadingElementId = "cargando",
+                                    OnBegin = "onBegin",
+                                    OnSuccess = "onInscrito"
+                                }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.Hidden("Usuario_id_E", Model.Usuario_id)
+                                    @Html.Hidden("Usuario_id_D", usuarioActivo)
+                                    @Html.Hidden("Oferta_id", Model.id)
+                                    <div id="inscrito">
+                                        <img id="cargando" style="display:none; float:right;" src="../../Content/images/ajax-loader.gif" />
+                                        <button id="btn-enviar" type="submit" class="btn btn-success">Inscribirse</button>
+                                    </div>
+                                }
+                            }
+ 
+                        }
+                    }
+                }
+
+
+            </div>
+        </div>
+    </div>
+    <!--OFERTAS RELACIONADAS-->
+    <div class="col-xs-12 col-sm-4 sp">
+        <div id="ultimasOfertas">
+            <h2 class="page-header">Ofertas <span>Relacionadas</span></h2>
+            @foreach (var rel in ViewBag.OfertasRelacionadas)
+            {
+                <div class="thumbnail">
+                    @if (rel.Usuario.Foto == "noFoto.jpg")
+                    {
+                         <a href="~/perfil/index/@rel.Usuario_id" target="_blank">
+                             <img class="flotar-d" src="../../Content/images/noDisponible.jpg" 
+                                  alt="@rel.Usuario.Nombre" title="Ver perfil de @rel.Usuario.Nombre">
+                         </a>
+                    }
+                    else
+                    {
+                        <a href="~/perfil/index/@rel.Usuario_id" target="_blank">
+                            <img class="flotar-d" src="../../Uploads/@rel.Usuario_id/FotoPerfil/@rel.Usuario.Foto" 
+                                 title="Ver perfil de @rel.Usuario.Nombre">
+                        </a>   
+                    }
+                    <div class="caption">
+                        <h4>@rel.Nombre</h4>
+                        <p class="titulo">@rel.Usuario.Nombre.ToUpper()</p>
+                        <p>...</p>
+                        @{
+                            string descripcion = rel.Descripcion;
+                            <p>@Html.CortarTexto(descripcion, 100)</p>
+                        }
+                        <p class="text-right">
+                            <span>
+                                <i class="fa fa-map-marker"> @rel.Localidad</i>&nbsp;
+                                <i class="fa fa-user-circle-o"> @rel.Vacantes Vacante(s)</i>
+                            </span>
+                            <a href="~/Ofertas/detalle/@rel.id" class="btn btn-primary btn-xs" title="Ver Oferta"><i class="fa fa-eye"></i></a>
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    function onInscrito(r) {
+        if (r.respuesta) {
+            var num = parseInt($('#numInscritos').text());
+            num++;
+            $('#numInscritos').text(num);
+        }
+        $('#inscrito').html(r.mensaje);
+    }
+</script>
+
+
+

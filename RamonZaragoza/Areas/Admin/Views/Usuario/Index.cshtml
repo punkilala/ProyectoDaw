@@ -1,0 +1,242 @@
+﻿@model Models.Usuario
+@{
+    ViewBag.Title = "Acerca de mí";
+    ViewBag.Rol = Session["rol"];
+}
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui-1.11.3.js"></script>
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script src="~/Scripts/jquery.maskedinput.js"></script>
+<script src="http://cdn.tinymce.com/4.4/tinymce.min.js"></script>
+
+    <h3 class="page-header"><i class="fa fa-info-circle"> </i><b> Acerca</b> de mí</h3>
+
+    <!--INICIO FORMULARIO-->
+    @using (Ajax.BeginForm("GuardarUsuario", "Usuario", new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "mensaje",
+        OnSuccess = "onSuccess",
+        LoadingElementId = "cargando",
+    }, new { id = "adminForm" , onsubmit = "return false;" }))
+    {
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab"><i class="fa fa-info-circle"> Información</i></a></li>
+                <li role="presentation"><a href="#ubicacion" aria-controls="ubicacion" role="tab" data-toggle="tab"><i class="fa fa-map-marker"> Ubicación</i></a></li>
+                <li role="presentation"><a href="#contacto" aria-controls="contacto" role="tab" data-toggle="tab"><i class="fa fa-address-book"></i> Contacto</a></li>
+                <li role="presentation"><a href="#social" aria-controls="social" role="tab" data-toggle="tab"><i class="fa fa-podcast"></i> Social</a></li>   
+            </ul>
+
+            <div class="tab-content">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(u => u.id)
+                @Html.HiddenFor(u => u.Foto)
+                <!-- TAB  INFORMACIÓN -->
+                <div role="tabpanel" class="tab-pane active" id="info">
+                    <div class="form-group">
+                        @if (ViewBag.Rol == 1)
+                        {
+                            <label>NIF</label>
+                        }
+                        else
+                        {<label>CIF</label> }
+
+                        @Html.TextBoxFor(u => u.Dni, new { @class = "form-control", @placeholder = "Ingrese siu NIF-CIF" })
+                        @Html.ValidationMessageFor(u => u.Dni, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        @Html.TextBoxFor(u => u.Nombre, new { @class = "form-control", @placeholder = "Ingrese su nombre" })
+                        @Html.ValidationMessageFor(u => u.Nombre, "", new { @class = "label label-danger" })
+                    </div>
+                    @if (ViewBag.Rol == 1)
+                    {
+                        <div class="form-group">
+                            <label>Apellido</label>
+                            @Html.TextBoxFor(u => u.Apellido, new { @class = "form-control", @placeholder = "Ingrese su Apellido" })
+                            @Html.ValidationMessageFor(u => u.Apellido, "", new { @class = "label label-danger" })
+                        </div>
+                    }
+                    <div class="form-group">
+                        @if (ViewBag.Rol == 1)
+                        {
+                            <label>Fecha de Nacimiento *</label>
+                            @Html.EditorFor(u => u.FNacimiento, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese fecha nacimiento" } })
+                            @Html.ValidationMessageFor(u => u.FNacimiento, "", new { @class = "label label-danger" })
+                        }
+                        else
+                        {
+                            <label>Hablar Sobre la Empresa</label>
+                            @Html.TextAreaFor(u => u.InfoGeneral, new { @class = "form-control", @placeholder = "Hable sobre la empresa" })
+                            @Html.ValidationMessageFor(u => u.InfoGeneral, "", new { @class = "label label-danger" })
+                        }
+                    </div>
+                </div>
+                <!-- TAB  UBICACION -->
+                <div role="tabpanel" class="tab-pane" id="ubicacion">
+                    <div class="form-group">
+                        <label>dirección</label>
+                        @Html.TextBoxFor(u => u.Direccion, new { @class = "form-control", @placeholder = "Ingrese su dirección" })
+                        @Html.ValidationMessageFor(u=>u.Direccion,"", new { @class = "label label-danger " })
+                    </div>
+                    <div class="form-group">
+                        <label>Cp</label>
+                        @Html.TextBoxFor(u => u.Cp, new { @class = "form-control", @placeholder = "Ingrese su codigo postal" })
+                        @Html.ValidationMessageFor(u => u.Cp, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Ciudad</label>
+                        @Html.TextBoxFor(u => u.Ciudad, new { @class = "form-control", @placeholder = "Ingrese su ciudad" })
+                        @Html.ValidationMessageFor(u => u.Ciudad, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Pais</label>
+                        @Html.TextBoxFor(u => u.Pais, new { @class = "form-control", @placeholder = "Ingrese su Pais" })
+                        @Html.ValidationMessageFor(u => u.Pais, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <!-- TAB  Contacto -->
+                <div role="tabpanel" class="tab-pane" id="contacto">
+                    <div class="form-group">
+                        <label>Telefono</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            @Html.TextBoxFor(u => u.Telefono, new { @class = "form-control", @placeholder = "Ingrese su teléfono" })
+                            @Html.ValidationMessageFor(u => u.Telefono, "", new { @class = "label label-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono secundario</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-mobile"></i>
+                            </span>
+                            @Html.TextBoxFor(u => u.Movil, new { @class = "form-control", @placeholder = "Ingrese su telefono secundario" })
+                            @Html.ValidationMessageFor(u => u.Movil, "", new { @class = "label label-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Correo Electronico</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        @Html.TextBoxFor(u => u.Email, new { @class = "form-control", @placeholder = "Ingrese su correo electrónico" })
+                        @Html.ValidationMessageFor(u => u.Email, "", new { @class = "label label-danger" }) 
+                        </div>
+                    </div>
+                </div>
+                <!-- TAB  Social -->
+                <div role="tabpanel" class="tab-pane" id="social">
+                    @if (Session["rol"].ToString() == "2")
+                    {
+                        <div class="form-group">
+                            <label>Web</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-podcast"></i>
+                                </span>
+                                @Html.TextBoxFor(u => u.Web, new { @class = "form-control", @placeholder = "Ingrese la Url de su Web" })
+                                @Html.ValidationMessageFor(u => u.Web, "", new { @class = "label label-danger" })
+                            </div>
+                        </div>
+                    }
+                    <div class="form-group">
+                        <label>Facebook</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                            @Html.TextBoxFor(u => u.Facebook, new { @class = "form-control", @placeholder = "Ingrese su dirección de facebook" })
+                            @Html.ValidationMessageFor(u => u.Facebook, "", new { @class = "label label-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Twitter</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                            @Html.TextBoxFor(u => u.Twitter, new { @class = "form-control", @placeholder = "Ingrese su direción de Twitter" })
+                            @Html.ValidationMessageFor(u => u.Twitter, "", new { @class = "label label-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>LinkedIn</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-linkedin"></i>
+                            </span>
+                            @Html.TextBoxFor(u => u.Linkedin, new { @class = "form-control", @placeholder = "Ingrese su dirección de LinkedIn" })
+                            @Html.ValidationMessageFor(u => u.Linkedin, "", new { @class = "label label-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div><!--FIN TAB PANEL-->
+
+        </div>
+
+        <div class="well well-sm col-xs-12">
+            <div id="mensaje" class="col-xs-10"></div>
+            <div class="col-xs-2 text-right">
+                <img id="cargando" src="~/Content/images/ajax-loader.gif" style="display:none;" />
+                <button id="btnGuardar" class="btn btn-primary" type="submit">Guardar</button>
+            </div>
+        </div>
+
+    }<!--FIN FORMULARIO-->
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<!--pidiendo una validacion de nuestro formulario en lado de cliente, esta validacion se hace conforme a las anotaciones-->
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#Nombre').change(function () {
+                //cambiar nombre en menu top
+                $('#mi-nombre').text($('#Nombre').val());
+            })
+            Colorea('@Session["menuActivo"]');
+        })
+        $("#FNacimiento").datepicker({ dateFormat: "dd/mm/yy" }).mask("99/99/9999");
+        //Deshabilitar dias futuros
+        $("#FNacimiento").datepicker("option", "maxDate", "+0m +0d");
+        //Mostrar rango de 65 años
+        $("#FNacimiento").datepicker("option", "yearRange", "-65:+0");
+
+        //evitar que la validacion cliente de error ya que solo valida mm/dd/yyyy
+        // se hace uso de la libreria maskedinput para enmascarar los input de fecha y salvar la validacion
+        $.validator.addMethod('date',
+        function (value, element, params) {
+            if (this.optional(element)) {
+                return true;
+            }
+            var ok = true;
+            try {
+                $.datepicker.parseDate('dd/mm/yy', value);
+            }
+            catch (err) {
+                ok = false;
+            }
+            return ok;
+        });
+
+        tinyMCE.init({
+            // General options
+            mode: "textareas",
+            theme: "modern",
+            height: 150,
+            plugins: "advlist",
+            advlist_bullet_styles: "square",
+            plugins: "hr",
+        });
+    </script>
+ }

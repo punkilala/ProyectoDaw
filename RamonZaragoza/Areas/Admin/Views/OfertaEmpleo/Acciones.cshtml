@@ -1,0 +1,128 @@
+﻿@model Models.OfertaEmpleo
+@{
+    
+}
+<script src="http://cdn.tinymce.com/4.4/tinymce.min.js"></script>
+<h3>@ViewBag.Title</h3>
+
+
+@using(Ajax.BeginForm("Acciones", new AjaxOptions
+{
+    HttpMethod="POST",
+    InsertionMode=InsertionMode.Replace,
+    UpdateTargetId="mensaje",
+    LoadingElementId="cargando",
+    OnBegin="onBegin",
+    OnSuccess="onSuccess"
+}))
+{
+    @Html.HiddenFor(oe => oe.id)
+    @Html.HiddenFor(oe => oe.Usuario_id)
+    if (Model.id == 0)
+    {
+        @Html.Hidden("Abierta", true)
+        @Html.Hidden("Fecha",DateTime.Now)
+    }
+    else
+    {
+        @Html.HiddenFor(oe => oe.Fecha)
+        @Html.HiddenFor(oe=>oe.Abierta)
+    }
+    @Html.AntiForgeryToken()
+
+    <div class="row sup">
+        <div class="col-xs-12 col-sm-6">
+            <label><span style="color:red">* </span>Titulo</label>
+            @Html.TextBoxFor(oe => oe.Nombre, new { @class = "form-control", placeholder = "Ingrese el titulo de la oferta" })
+            @Html.ValidationMessageFor(oe => oe.Nombre, "", new { @class = "label label-danger" })
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <label><span style="color:red">* </span>Categoría</label>
+            @Html.DropDownList("Categoria_id", new SelectList(ViewBag.LCategoria, "id", "nombre"), new { @class = "form-control" })
+        </div> 
+     </div>   
+    <div class="row sup">
+        <div class="form-group col-xs-12 col-sm-6">
+            <label><span style="color:red">* </span>Requisitos Minimos</label>
+            @Html.TextAreaFor(oe => oe.RequisitosMin, new { @class = "form-control", placeholder = "" })
+            @Html.ValidationMessageFor(oe => oe.RequisitosMin, "", new { @class = "label label-danger" })
+        </div>
+        <div class="col-xs-12 col-sm-6 sup">
+            <label><span style="color:red">* </span>Experiencia Minima</label>
+            @Html.TextAreaFor(oe => oe.ExperienciaMin, new { @class = "form-control", placeholder = "" })
+            @Html.ValidationMessageFor(oe => oe.ExperienciaMin, "", new { @class = "label label-danger" })
+        </div>
+    </div>
+   <div class="row sup">
+       <div class="form-group col-xs-12">
+           <label><span style="color:red">* </span>Decripción de la Oferta</label>
+           @Html.TextAreaFor(oe => oe.Descripcion, new { @class = "form-control", placeholder = "" })
+           @Html.ValidationMessageFor(oe => oe.Descripcion, "", new { @class = "label label-danger" })
+       </div>
+   </div>
+   <div class="row sup">
+       <div class="col-xs-12 col-sm-2">
+           <label>Vacantes</label>
+           @Html.TextBoxFor(oe => oe.Vacantes, new { @class = "form-control", placeholder = ""})
+           @Html.ValidationMessageFor(oe => oe.Vacantes, "", new { @class = "label label-danger" })
+           <div id="slider-range-min" style="margin-top: 5px;"></div>
+       </div>
+       <div class="col-xs-12 col-sm-2">
+           <label>Salario</label>
+           @Html.TextBoxFor(oe => oe.Salario, new { @class = "form-control", placeholder = ""})
+           @Html.ValidationMessageFor(oe => oe.Salario, "", new { @class = "label label-danger" })
+           <div id="slider-range-min1" style="margin-top: 5px;"></div>
+       </div>
+       <div id="tipoSalario" class="col-xs-12 col-sm-8">
+           <div class="col-xs-12 col-sm-6">
+               <label></label>
+               @Html.DropDownList("ModoPago", new SelectList(ViewBag.LModoPago, "descripcion", "descripcion"), new { @class = "form-control" })
+               @Html.ValidationMessageFor(oe => oe.ModoPago, "", new { @class = "label label-danger" })
+           </div>
+          <div class="col-xs-12 col-sm-6">
+              <label></label>
+              @Html.DropDownList("Pago", new SelectList(ViewBag.LPago, "Descripcion", "Descripcion"), new { @class = "form-control" })
+              @Html.ValidationMessageFor(oe => oe.Pago, "", new { @class = "label label-danger" })
+          </div>  
+       </div>
+   </div>
+    <div class="col-xs-12 col-sm-3">
+        <label>Localidad</label>
+        @Html.TextBoxFor(oe => oe.Localidad, new { @class = "form-control", placeholder = "" })
+        @Html.ValidationMessageFor(oe => oe.Localidad, "", new { @class = "label label-danger" })
+        <div id="slider-range-min" style="margin-top: 5px;"></div>
+    </div>
+   <div class="row sup">
+       <div class="col-xs-12">
+           <div id="mensaje" class="col-xs-12 col-sm-8"></div>
+           <div class="col-xs-12 col-sm-4 text-right">
+               @Html.ActionLink("Volver", "Index",null, new { @class = "btn btn-default" })
+               <img id="cargando" style="display:none;" src="~/Content/images/ajax-loader.gif" />
+               <button id="btn-enviar" type="submit" class="btn btn-primary">Enviar</button>
+           </div>
+       </div>
+   </div>
+   
+
+        
+}
+
+<script>
+    $(document).ready(function () {
+
+        Colorea('@Session["menuActivo"]');
+
+        tinyMCE.init({
+            // General options
+            mode: "textareas",
+            theme: "modern",
+            height: 150,
+            plugins: "advlist",
+            advlist_bullet_styles: "square",
+            plugins: "hr",
+        });
+    });
+</script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+

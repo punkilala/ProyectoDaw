@@ -1,0 +1,174 @@
+﻿@model Models.Usuario
+
+<div id="mensaje"></div>
+<!--HABLAR DE DE LA EMPRESA-->
+@if (Model.Rol_id == 2)
+{
+    <h2 class="titulos titulo-azul">
+        <i class="fa fa-info-circle pull-right"></i>
+        Sobre Nosotros
+    </h2>
+    <div class="lista">
+        @Html.Raw(Model.InfoGeneral)
+    </div>
+}
+<!--EXPERIENCIA PROFESIONAL-->
+@if (Model.Experiencia.Where(e => e.Tipo == 1).Count() > 0)
+{
+    <h2 class="titulos titulo-azul">
+        <i class="fa fa-briefcase pull-right"></i>
+        Experiencia profesional
+    </h2>
+    foreach (var e in Model.Experiencia.Where(e => e.Tipo == 1).OrderByDescending(e=>e.Desde))
+    {
+        <div class="lista well well-sm">
+            <div class="lista-cabecera">
+                @e.Nombre 
+                <small class="lista-cabecera-fecha">
+                     @string.Format("{0:d}",e.Desde) - 
+                     @(e.Actual==true ? "ACTUALMENTE" : string.Format("{0:d}", e.Hasta))
+                </small>
+                <span class="lista-cabecera-subtitulos">@e.Titulo</span>
+            </div>
+            <div class="lista-descripcion">
+                <p>@Html.Raw(e.Descripcion)</p>
+            </div>
+        </div>
+    }
+}
+
+<!--ESTUDIOS REALIZADOS-->
+@if (Model.Experiencia.Where(e => e.Tipo == 2).Count() > 0)
+{
+    <h2 class="titulos titulo-verde">
+        <i class="fa fa-university pull-right"></i>
+        Estudios realizados
+    </h2>
+    foreach (var e in Model.Experiencia.Where(e => e.Tipo == 2).OrderByDescending(e=>e.Desde))
+    {
+        <div class="lista well well-sm">
+            <div class="lista-cabecera">
+                @e.Nombre 
+                <small class="lista-cabecera-fecha">
+                     @string.Format("{0:d}", e.Desde) -
+                     @(e.Actual==true ? "ACTUALMENTE" : string.Format("{0:d}", e.Hasta))
+                </small>
+                <span class="lista-cabecera-subtitulos">@e.Titulo
+                </span>
+            </div>
+            <div class="lista-descripcion">
+                <p>@Html.Raw(e.Descripcion)</p>
+            </div>
+        </div>
+    }
+}
+
+<!--CONOCIMIENTOS ADQUIRIDOS-->
+@if(Model.Conocimiento.Count()>0)
+{
+    <h2 class="titulos titulo-amarillo">
+        <i class="fa fa-line-chart pull-right"></i>
+        Conocimientos Adquiridos
+    </h2>
+    <ul class="list-group">
+        @foreach (var c in Model.Conocimiento.OrderBy(c => c.Nombre))
+        {
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <b>@c.Nombre</b>
+                    </div>
+                    <div class="col-xs-11 col-sm-7">
+                        @{
+                            var pardillo = 0; var intermedio = 0; var dios = 0;
+                            pardillo = c.Nivel - 45;
+                            if (pardillo <= 0)
+                            {
+                                pardillo = c.Nivel;
+                            }
+                            else
+                            {
+                                pardillo = 45;
+                                intermedio = c.Nivel - 80;
+                                if (intermedio <= 0)
+                                {
+                                    intermedio = 35 + intermedio;
+                                }
+                                else
+                                {
+                                    intermedio = 35;
+                                    dios = c.Nivel - 80;
+                                }
+                            }
+                        }
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:@pardillo%">
+
+                            </div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:@intermedio%">
+
+                            </div>
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:@dios%">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-1">
+                        @c.Nivel%
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+}
+
+<!--IDIOMAS-->
+ @if (Model.Idioma.Count() > 0)
+ {
+    <h2 class="titulos titulo-Lila">
+        <i class="fa fa-language pull-right"></i>
+        Idiomas
+    </h2>
+
+     foreach (var item in Model.Idioma)
+     {
+        <div class="lista well well-sm">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 cabecera-idioma">
+                    @item.Idiomas.Descripcion
+                </div>
+                <div class="col-xs-6 col-sm-4" style="margin-top: 5px;">
+                    <span class="idioma-titulo">Hablado </span> <span class="idioma-nivel">@item.Hablado</span>
+                </div>
+                <div class="col-xs-6 col-sm-4" style="margin-top: 5px;">
+                    <span class="idioma-titulo">Escrito </span> <span class="idioma-nivel">@item.Escrito</span>
+                </div>
+            </div>
+        </div>
+     }
+
+ }
+
+ <!--DOCUMENTOS ADJUNTOS-->
+
+    @if (Model.Adjuntos.Count() > 0)
+    {
+        <h2 class="titulos titulo-rojo">
+            <i class="fa fa-folder-open pull-right"></i>
+            Documentos Adjuntos
+        </h2>
+
+        <ul id="adjuntos" class="list-group">
+            @foreach (var adj in Model.Adjuntos.OrderBy(a => a.fichero))
+            {
+                <li class="list-group-item col-xs-12">
+                    <a href="~/Uploads/@Model.id/Adjuntos/@adj.fichero" target="_blank">@adj.fichero</a>
+                    <i class="fa fa-paperclip pull-right"></i>
+                </li>
+            }
+        </ul>
+    }
+
+    <hr />
+
+

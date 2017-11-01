@@ -1,0 +1,24 @@
+﻿
+
+@{
+    ViewBag.Title = "Idiomas";
+}
+<h3 class="page-header">
+    <i class="fa fa-language"> </i> @ViewBag.Title
+    @Html.ActionLink("Agregar", "Acciones", "Idioma", new object { }, new { @class = "btn btn-primary pull-right", title = "Agregar" })
+</h3>
+
+<div id="parcial">
+    @Html.Action("_Listado")
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+        Colorea('@Session["menuActivo"]');
+    });
+    function RecargarPagina() {
+        var url = "@Url.Action("_Listado", "Idioma")";
+        $("#parcial").load(url);
+    }
+</script>

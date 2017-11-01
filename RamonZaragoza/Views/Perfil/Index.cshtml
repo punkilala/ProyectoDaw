@@ -1,0 +1,59 @@
+﻿@model Models.Usuario
+@{
+    ViewBag.Title = Model.Nombre + " - CV";
+    Layout = "~/Views/Shared/_LayoutPerfil.cshtml";
+    var fNacimiento = string.Format("{0:d}", Model.FNacimiento);
+}
+<!--DATOS PERSONALES-->
+<div id="usuario">
+    <div class="usuario-container-fixed">
+        <div class="usuario-container">
+            <h1>@Model.Nombre <br /> @Model.Apellido</h1>
+            @if (Model.Rol_id == 1){ <p>@Model.Dni</p>}
+            @if (Model.Foto=="noFoto.jpg")
+            {
+                <img class="foto" src="~/Content/images/noFoto.jpg" title="@Model.Nombre" />
+            }
+            else
+            {
+                <img class="foto" src="~/uploads/@Model.id/FotoPerfil/@Model.Foto" title="@Model.Nombre" />
+            }
+            @if (Model.Rol_id == 1)
+            {
+                <span class="texto">Fecha Nacimiento</span>
+                <span class="campo">@fNacimiento</span>
+            }
+            else
+            {
+                <span class="texto">Página Web</span>
+                <span class="campo">
+                    <a href="@Url.Content(Model.Web)" target="_blank">@Model.Web</a>
+                </span>
+            }
+            <span class="texto">Dirección</span>
+            <span class="campo">@Model.Direccion<br />@Model.Cp @Model.Ciudad / @Model.Pais</span>
+            <span class="texto">Teléfono</span>
+            <span class="campo">@Model.Telefono  @if (Model.Telefono != null)
+            { <span> / </span> } @Model.Movil</span>
+            <span class="texto">Email</span>
+            <span class="campo"><a href="mailto:'@Model.Email'">@Model.Email</a></span>
+        </div>
+    </div>
+</div>
+
+<!--CONTENIDO-->
+<div id="contenido">
+    <!--MENU TOP-->
+    @Html.Partial("_MenuContacto", Model)
+
+    <div class="cuerpo-container cuerpo-fluid">
+        <!--DATOS PERFIL-->
+        @Html.Action("_MostrarCv", new {id=Model.id })
+
+
+    </div>
+    <!--FOOTER-->
+    <footer id="footer" class="col-xs-12">
+        2017 -2018 &nbsp; &nbsp;  Proyecto Fin Curso - Ramon Zaragoza
+    </footer>
+</div>

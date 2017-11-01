@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Ofertas de Empleo";
+}
+<!--FORMULARIO OFERTAS--> 
+@using (Html.BeginForm("_Listado", "Ofertas", FormMethod.Post, new { id = "adminForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.Hidden("pagina", "")
+    @Html.Hidden("EjecutarFuncion", "AltoFiltro();")
+    <div class="container-fluid cero-padding">   
+        <!--Filtro-->
+        <div id="filtro" class="col-xs-12 col-sm-3 cero-padding">
+            @Html.Partial("_FiltroOfertas")
+        </div>
+        <!--Cuerpo-->
+        <div id="parcial" class="col-xs-12 col-sm-9 sp cuerpo-oferta">
+            @Html.Action("_Listado")
+        </div>  
+    </div>
+}
+<!--FIN FORMULARIO OFERTAS-->
+<script>
+    $(document).ready(function () {
+        AltoFiltro();
+    });
+    function AltoFiltro() {
+        var altoCuerpo = ($('#parcial').height());
+        if (altoCuerpo > 540) {
+            $('#filtro').height($('#parcial').height());
+        } else {
+            $('#filtro').height(540);
+        }
+    }
+</script>
+<script src="~/Scripts/paginacion.js"></script>

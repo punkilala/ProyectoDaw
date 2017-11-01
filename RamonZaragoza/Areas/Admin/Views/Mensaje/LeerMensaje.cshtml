@@ -1,0 +1,34 @@
+﻿@model Models.Mensaje
+@{
+    ViewBag.Title = "Mensaje";
+    int volver = Convert.ToInt16(@Session["EstadoMensajes"]);
+}
+
+<div class="jumbotron">
+    <h1 class="display-3 ">@Model.Asunto</h1>
+    <p class="lead"><b>Remite </b>@Model.Remitente</p>
+    <p class="lead">@Model.Fecha</p>
+    <hr class="my-4">
+    <p class="text-justify">@Model.Mensaje1</p>
+    <p class="lead text-right">
+        @if (volver  == 1)
+        {
+            @Html.ActionLink("Volver", "Index", null, new { @class = "btn btn-default" })
+        }
+        else
+        {
+            @Html.ActionLink("Volver", "Index",new {estado_id= @Model.Estado_id}, new { @class = "btn btn-default" })
+        }
+
+    </p>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        Colorea('@Session["menuActivo"]');
+    })
+</script>
+
+
+

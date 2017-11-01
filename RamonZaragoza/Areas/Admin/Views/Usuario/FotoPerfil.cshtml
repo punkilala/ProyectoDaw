@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Foto de Perfil";
+}
+
+<h3 class="page-header">Foto de Perfil</h3>
+<div id="parcial" class="col-sm-12">
+    @Html.Action("_CambiarFoto", "Usuario")
+</div>
+
+<script>
+    function RecargarFoto() {
+        $('#parcial').load('@Url.Content("~/admin/Usuario/_CambiarFoto")');
+    }
+
+</script>

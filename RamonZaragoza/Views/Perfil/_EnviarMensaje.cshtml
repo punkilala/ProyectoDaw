@@ -1,0 +1,47 @@
+﻿@model Models.Mensaje
+
+<script src="~/Scripts/misAjax.js"></script>
+
+<!-- Modal Formulario -->
+@using (Ajax.BeginForm("_EnviarMensaje", new AjaxOptions
+{
+    HttpMethod = "POST",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "mensaje",
+    LoadingElementId = "cargando",
+    OnBegin = "onBegin",
+    OnSuccess = "onSuccess"
+}))
+{
+    @Html.AntiForgeryToken()
+    @Html.Hidden("Remitente", Model.Remitente = Session["nombre"].ToString())
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Contactar</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Asunto</label>
+                        @Html.TextBoxFor(m => m.Asunto, new { @class = "form-control", placeholder = "Ingrese el asunto" })
+                        @Html.ValidationMessageFor(m => m.Asunto, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        @Html.TextAreaFor(m => m.Mensaje1, new { @class = "form-control", placeholder = "Ingrese el mensaje" })
+                        @Html.ValidationMessageFor(m => m.Mensaje1, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cancelar</button>
+                    <img id="cargando" style="display:none;" src="~/Content/images/ajax-loader.gif" />
+                    <button id="btn-enviar" type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+}
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
