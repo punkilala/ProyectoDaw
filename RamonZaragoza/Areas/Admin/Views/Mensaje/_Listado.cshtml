@@ -45,7 +45,7 @@
                     {
                         <tr>
                             <td>
-                                @Html.ActionLink(item.Asunto, "LeerMensaje", new { id = item.id})
+                                @Html.ActionLink(item.Asunto, "LeerMensaje", new { id = item.id}, new { title="Leer mensaje"})
                             </td>
                             <td>@item.Remitente</td>
                             <td class="text-center">@item.Fecha</td>

@@ -54,11 +54,11 @@
             <thead>
                 <!--ID miTabla se utilizara en jquery para seleccionar la ordenacion correcta-->
                 <tr id="miTabla">
-                    <th width="10%;" class="text-center"><a href="#" class="filtro" id="numeroOrder">Num. Oferta</a></th>
-                    <th width="55%;"><a href="#" class="filtro" id="nombreOrder">Nombre</a></th>
-                    <th class="text-center"><a href="#" class="filtro" id="desdeOrder">Fecha</a></th>  
+                    <th width="10%;" class="text-center"><a href="#" class="filtro" id="numeroOrder" title="Ordenación">Num. Oferta</a></th>
+                    <th width="55%;"><a href="#" class="filtro" id="nombreOrder" title="Ordenación">Nombre</a></th>
+                    <th class="text-center"><a href="#" class="filtro" id="desdeOrder" title="Ordenación">Fecha</a></th>  
                     <th></th>
-                    <th><a href="#" class="filtro" id="inscritosOrder">Inscritos</a></th>
+                    <th><a href="#" class="filtro" id="inscritosOrder" title="Ordenación">Inscritos</a></th>
                     <th>Estado</th>
                 </tr>
             </thead>
@@ -66,8 +66,8 @@
                 @foreach (var oe in Model)
                 {
                     <tr>
-                        <td class="text-center"><a href="@Url.Action("Acciones","OfertaEmpleo", new { id = oe.id })"><b>@oe.id</b></a></td>
-                        <td>@Html.ActionLink(oe.Nombre,"Detalle",new {area="", controller="Ofertas",id= oe.id},new { target = "_blank" })</td>
+                        <td class="text-center"><a href="@Url.Action("Acciones","OfertaEmpleo", new { id = oe.id })" title="Modificar"><b>@oe.id</b></a></td>
+                        <td>@Html.ActionLink(oe.Nombre,"Detalle",new {area="", controller="Ofertas",id= oe.id},new { target = "_blank", title="Ver oferta" })</td>
                         <td class="text-center">@string.Format("{0:d}", oe.Fecha)</td>     
                         <td>
                                @if (oe.Inscritos.Count() > 0)

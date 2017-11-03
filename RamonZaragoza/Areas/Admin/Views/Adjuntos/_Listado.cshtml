@@ -20,7 +20,7 @@ else
                 @foreach (var item in Model)
                 {
                     <li class="list-group-item" style="height: auto;">
-                        <a href="@Url.Content(ViewBag.RutaAdjunta + item.fichero)" target="_blank">
+                        <a href="@Url.Content(ViewBag.RutaAdjunta + item.fichero)" target="_blank" title="Ver adjunto">
                             @item.fichero
                         </a>
                         <input class="pull-right" type="checkbox" name="id" value="@item.id" />

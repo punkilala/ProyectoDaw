@@ -30,10 +30,10 @@
             <!--ID miTabla se utilizara en jquery para seleccionar la ordenacion correcta-->
             <tr id="miTabla">
                 <th width="60%">
-                    <a href="#" class="filtro" id="nombreOrder">Conocimiento</a>
+                    <a href="#" class="filtro" id="nombreOrder" title="Ordenación">Conocimiento</a>
                 </th>
                 <th>
-                    <a href="#" class="filtro" id="tituloOrder">Nivel</a>
+                    <a href="#" class="filtro" id="tituloOrder" title="Ordenación">Nivel</a>
                 </th>
                 <th class="text-center" width="1%">%</th>
                 <th width="1%;">
@@ -48,7 +48,7 @@
             {
                 <tr>
                     <td style="vertical-align: middle;">
-                        <a href="@Url.Action("Acciones", "Conocimiento", new { id = Conocimiento.id })">@Conocimiento.Nombre</a>
+                        <a href="@Url.Action("Acciones", "Conocimiento", new { id = Conocimiento.id })" title="Moficicar">@Conocimiento.Nombre</a>
                     </td>
                     <td>
                         @{

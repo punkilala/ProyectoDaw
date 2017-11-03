@@ -23,7 +23,7 @@
             @foreach (var i in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(@i.Idiomas.Descripcion, "Acciones", new { id = i.id })</td>
+                    <td>@Html.ActionLink(@i.Idiomas.Descripcion, "Acciones", new { id = i.id },new {title="Modificar" })</td>
                     <td>@i.Hablado</td>
                     <td>@i.Escrito</td>
                     <td class="text-center"><input type="checkbox" class="seleccion" name="idioma_id" value="@i.id" /></td>

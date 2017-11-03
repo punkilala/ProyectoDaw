@@ -57,16 +57,16 @@
             <tr id="miTabla">
                 @if (tipo == 1)
                 {
-                    <th style="width:20%;"><a href="#" class="filtro" id="nombreOrder">Empresa</a></th>
-                    <th style="width:30%;"><a href="#" class="filtro" id="tituloOrder">Cargo</a></th>
+                    <th style="width:20%;"><a href="#" class="filtro" id="nombreOrder" title="Ordenación">Empresa</a></th>
+                    <th style="width:30%;"><a href="#" class="filtro" id="tituloOrder" title="Ordenación">Cargo</a></th>
                 }
                 else
                 {
-                    <th style="width:20%;"><a href="#" class="filtro" id="nombreOrder">Estudios</a></th>
-                    <th style="width:30%;"><a href="#" class="filtro" id="tituloOrder">Centro</a></th>
+                    <th style="width:20%;"><a href="#" class="filtro" id="nombreOrder" title="Ordenación">Estudios</a></th>
+                    <th style="width:30%;"><a href="#" class="filtro" id="tituloOrder" title="Ordenación">Centro</a></th>
                 }
-                <th class="text-center" style="width:5%;"><a href="#" class="filtro" id="desdeOrder">Desde</a></th>
-                <th class="text-center" style="width:5%;"><a href="#" class="filtro" id="hastaOrder">Hasta</a></th>
+                <th class="text-center" style="width:5%;"><a href="#" class="filtro" id="desdeOrder" title="Ordenación">Desde</a></th>
+                <th class="text-center" style="width:5%;"><a href="#" class="filtro" id="hastaOrder" title="Ordenación">Hasta</a></th>
                 <th style="width:1%;"><button id="btnEliminar" type="button" value="1" class="btn btn-danger btn-xs fa fa-trash-o"></button></th>
                 <!--Solo elimnar si se pulsa el boton eliminar... este hidden se modifica desde paginacion.js-->
                 @Html.Hidden("Eliminar")
@@ -78,7 +78,7 @@
             {
                 <tr>
                     <td>
-                        <a href="@Url.Action("Acciones", "Experiencia", new { tipo= tipo, id = expe.id })">@expe.Nombre<span></span></a>
+                        <a href="@Url.Action("Acciones", "Experiencia", new { tipo= tipo, id = expe.id })" title="Modificar">@expe.Nombre<span></span></a>
                     </td>
                     <td>@expe.Titulo</td>
                     <td class="text-center align-middle">@expe.Desde.ToString("dd/MM/yyyy")</td>

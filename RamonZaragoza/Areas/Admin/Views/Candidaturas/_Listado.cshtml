@@ -11,7 +11,7 @@
             <div class="content-can" @if (ca.OfertaEmpleo.Abierta == false) { <text> style="background-color:#f3f3f3"</text>} >
                 <header>
                     <div class="titulo" @if (ca.OfertaEmpleo.Abierta == false) { <text> style="text-decoration:line-through"</text>}>
-                        @Html.ActionLink(ca.OfertaEmpleo.Nombre, "Historial", new { id = ca.Oferta_id })
+                            @Html.ActionLink(ca.OfertaEmpleo.Nombre, "Historial", new { id = ca.Oferta_id }, new { title = "Ver Historial" }) 
                     </div>
                     <div class="hora">
                         <i class="fa fa-clock-o"></i> @string.Format("{0:dd MMM yyyy}", ca.Fecha)
@@ -44,12 +44,16 @@
                             }
                         </span>
                         @if (ca.OfertaEmpleo.Abierta == false)
-                    {
+                        {
                             <span style="color:#891E83;">
                                 ...La Empresa ha cerrado el proceso de selección
                                 <i class="fa fa-lock"></i>
                             </span>
                         }
+                        <span>
+                            <br />
+                            <a href="~/Admin/Candidaturas/Historial/@ca.Oferta_id" class="btn btn-primary btn-xs" title="Ver Historial"><i class="fa fa-eye"></i></a>
+                        </span>
                     </div>
                 </div>
             </div>   
