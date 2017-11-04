@@ -126,7 +126,7 @@ form{position:relative;}
 }
 
 /*Ofertas relacionadas*/
-.flotar-d{float:left;}
+.flotar-d{float:left;padding: 4px;}
 
 /*Parallax*/
 #contenedor4 {
@@ -247,6 +247,7 @@ nav input, nav select, #slider-range-min{margin-left:10px !important;}
 .img-cuerpoOferta{
     width: 200px !important;
     height: 130px !important;
+    padding: 5px;
 }
 .footer-izq i, .footer-der i{color:gray;
 }

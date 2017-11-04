@@ -25,12 +25,13 @@
         AltoFiltro();
     });
     function AltoFiltro() {
-        var altoCuerpo = ($('#parcial').height());
-        if (altoCuerpo > 540) {
-            $('#filtro').height($('#parcial').height());
-        } else {
-            $('#filtro').height(540);
-        }
+        //Ajustar HEIGHT del Filtro dinamicamente
+        $('#filtro').css('height', 'auto');
+
+        var altoFiltroInicial = $('#filtro').height();
+        var altoCuerpo = $('#parcial').height();
+
+        if (altoCuerpo > altoFiltroInicial) $('#filtro').height(altoCuerpo);
     }
 </script>
 <script src="~/Scripts/paginacion.js"></script>
