@@ -253,6 +253,11 @@ namespace Models
                 throw;
             }
         }
+        /// <summary>
+        /// Devolver las ultimas ofertas publicadas
+        /// </summary>
+        /// <param name="cuantas">Número de ofertas que se van devolver</param>
+        /// <returns>Una lista de las ofertas de empleo</returns>
         public List<OfertaEmpleo> GetUltimasOfertas(int cuantas)
         {
             var lista = new List<OfertaEmpleo>();

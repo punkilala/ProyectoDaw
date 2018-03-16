@@ -8,3 +8,8 @@ C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\Helper\bin\Deb
 C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\Helper\obj\Debug\Helper.dll
 C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\Helper\obj\Debug\Helper.pdb
 C:\Users\usuario\Documents\Visual Studio 2015\Projects\miProyecto\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\ProyectoDaw\Helper\bin\Debug\Helper.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\ProyectoDaw\Helper\bin\Debug\Helper.pdb
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\ProyectoDaw\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\ProyectoDaw\Helper\obj\Debug\Helper.dll
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\ProyectoDaw\Helper\obj\Debug\Helper.pdb
